@@ -16,7 +16,11 @@
             <div class="col-md-8">
               <div>
                 <div class="post-font-subtitle">Where to get</div>
-                <div class="post-font-detail"><%= demandpost.city_from %></div>
+                <% if demandpost.city_from != "" %>
+                  <div class="post-font-detail"><%= demandpost.city_from %></div>
+                <% else %>
+                  <div class="post-font-detail"><%= ISO3166::Country.new(demandpost.country_from).name %></div>
+                <% end %>
                 <div class="post-font-subtitle">What I want to get</div>
                 <div class="post-font-detail"><%= demandpost.item_description %></div>
                 <div class="post-font-subtitle">The choise of reward</div>

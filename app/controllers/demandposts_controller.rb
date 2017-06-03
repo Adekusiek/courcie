@@ -8,7 +8,8 @@ class DemandpostsController < ApplicationController
     # Currently ransack gem is used for posting research
     # from top page, params[:q] ic coming
     # just for city query
-    @search = Demandpost.search(city_to_or_city_from_cont_any: [params[:q][:city_to],params[:q][:city_from]] )
+    # the search logic must be reevaluated
+    @search = Demandpost.search(city_to_or_city_from_country_from_cont_any: [params[:q][:city_to],params[:q][:city_from]] )
     @demandposts = @search.result
 
     respond_to do |format|
@@ -20,6 +21,7 @@ class DemandpostsController < ApplicationController
   # GET /demandposts/1
   # GET /demandposts/1.json
   def show
+    @c = ISO3166::Country.new(@demandpost.country_from)
   end
 
   # GET /demandposts/new
@@ -79,6 +81,6 @@ class DemandpostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def demandpost_params
-      params.require(:demandpost).permit(:city_to, :city_from, :expire_date, :item_description, :money_ok, :no_money_ok, :reward_description).merge(user_id: current_user.id)
+      params.require(:demandpost).permit(:city_to, :city_from, :country_from, :expire_date, :item_description, :money_ok, :no_money_ok, :reward_description).merge(user_id: current_user.id)
     end
 end

@@ -27,9 +27,10 @@
           </div>
         </div>
         <div class="form-group">
-          <%= f.label :city_from, "Waiting Citizon", class: "control-label col-md-3" %>
+          <%= f.label :city_from, "Where to get", class: "control-label col-md-3" %>
           <div class="col-md-6">
-            <%= f.text_field :city_from, id: :city_from, class: "form-control" %>
+            <%= f.country_select :country_from,  class: "form-control" %>
+            <%= f.text_field :city_from, id: :city_from, class: "form-control", placeholder: "City (Optional)" %>
           </div>
         </div>
 
@@ -45,7 +46,7 @@
         <div class="form-group">
           <%= f.label :item_description, 'Item description', class: "control-label col-md-3" %>
           <div class="col-md-9">
-            <%= f.text_area :item_description, class: "form-control", placeholder: "Ex. A camera kit and 3 bins of bon maman ja" %>
+            <%= f.text_area :item_description, class: "form-control", placeholder: "Ex. A camera kit and 3 books. My favorite chocolates" %>
           </div>
         </div>
         <div class="col-md-8 col-md-offset-4">

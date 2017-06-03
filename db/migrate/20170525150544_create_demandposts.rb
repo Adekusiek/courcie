@@ -3,6 +3,7 @@ class CreateDemandposts < ActiveRecord::Migration[5.1]
     create_table :demandposts do |t|
       t.string :city_from
       t.string :city_to
+      t.string :country_from
       t.date :expire_date
       t.text :item_description
       t.boolean :money_ok, default: true
