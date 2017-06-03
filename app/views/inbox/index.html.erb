@@ -1,0 +1,31 @@
+<div class="body-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h2>Messages</h2>
+        <hr class="blackborder">
+        <% @array.each do |user, lastmessage| %>
+        <a href="/inbox/<%= lastmessage.messagebox_id %>" , class="post">
+          <div class="row">
+            <div class="col-md-2">
+              <%= image_tag user.avatar.url(:medium), class: "avatarsmall center-block"%>
+            </div>
+            <div class="col-md-3">
+              <div class="text-center">
+                <div class="profile-font-name-small"><%= user.name %></div>
+                <div class="profile-font-town-small"><%= user.home_town %></div>
+                <div class="profile-font-town-small"><%= lastmessage.created_at %></div>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="profile-font-town"><%= lastmessage.content%></div>
+            </div>
+          </div>
+        </a>
+        <hr class="blackborder">
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

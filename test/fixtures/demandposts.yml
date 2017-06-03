@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  city: MyString
+  expire_date: 2017-05-26
+  course_description: MyText
+  money_ok: false
+  no_money_ok: false
+  money_description: MyText
+  no_money_description: MyText
+  meeting_place: MyText
+  user_id: 1
+
+two:
+  city: MyString
+  expire_date: 2017-05-26
+  course_description: MyText
+  money_ok: false
+  no_money_ok: false
+  money_description: MyText
+  no_money_description: MyText
+  meeting_place: MyText
+  user_id: 1

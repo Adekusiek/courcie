@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @messagebox.message_id %>
+</p>
+
+<%= link_to 'Edit', edit_messagebox_path(@messagebox) %> |
+<%= link_to 'Back', messageboxes_path %>

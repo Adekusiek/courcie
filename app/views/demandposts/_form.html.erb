@@ -1,0 +1,72 @@
+
+  <%= form_with(model: demandpost, local: true, class: "form-horizontal") do |f| %>
+  <% if demandpost.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(demandpost.errors.count, "error") %>
+      prohibited this demandpost from being saved:</h2>
+    <ul>
+      <% demandpost.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="text-center">
+    <h2 class="section-heading">Announcement</h2>
+  </div>
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="form-group">
+          <%= f.label :city_to, "Your City", class: "control-label col-md-3" %>
+          <div class="col-md-6">
+            <%= f.text_field :city_to, id: :city_to, class: "form-control" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :city_from, "Waiting Citizon", class: "control-label col-md-3" %>
+          <div class="col-md-6">
+            <%= f.text_field :city_from, id: :city_from, class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="form-group ">
+          <%= f.label :expire_date, "Expire at", class: "control-label col-md-3" %>
+          <div class="col-md-6">
+            <%= f.date_field :expire_date,  class: "form-control datepicker" %>
+
+          </div>
+        </div>
+        <hr>
+
+        <div class="form-group">
+          <%= f.label :item_description, 'Item description', class: "control-label col-md-3" %>
+          <div class="col-md-9">
+            <%= f.text_area :item_description, class: "form-control", placeholder: "Ex. A camera kit and 3 bins of bon maman ja" %>
+          </div>
+        </div>
+        <div class="col-md-8 col-md-offset-4">
+          <div class="checkbox-inline">
+            <%= f.check_box :money_ok %>Money
+          </div>
+          <div class="checkbox-inline">
+            <%= f.check_box :no_money_ok %>Not Money
+          </div>
+        </div>
+        <br/>
+        <div class="form-group">
+          <%= f.label :reward_description, 'Possible reward description', class: "control-label col-md-3"   %>
+          <div class="col-md-9">
+            <%= f.text_area :reward_description, class: "form-control", placeholder: "Ex. A lunch in local restraurant....or 20$" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.submit 'Post a demand', class: "btn btn-primary btn-post center-block" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>

@@ -1,0 +1,38 @@
+<div class="body-padding">
+  <div class="row form">
+    <div class="col-lg-8 col-lg-offset-2">
+      <%= form_for current_user do |f| %>
+      <h2>プロフィール編集</h2>
+      <div class="col-lg-4">
+        <%= image_tag current_user.avatar.url(:medium), class: "avatarlarge center-block" %>
+
+        <div class="form-group file">
+          <%= f.file_field :avatar, class: "form-control floating-label", placeholder: "画像アップロード" %>
+        </div>
+      </div>
+      <div class="col-lg-8 form-horizontal">
+        <div class="form-group">
+          <%= f.label "Living town", class: "control-label col-lg-2" %>
+          <div class="col-lg-10">
+            <%= f.text_field :home_town, placeholder: "Living in...", id: :city_from, class: "form-control" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label "Name", class: "control-label col-lg-2" %>
+          <div class="col-lg-10">
+            <%= f.text_field :name, class: "form-control" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+
+      <div class="form-group">
+        <%= f.submit "submit", class: "btn btn-primary withripple btn-post center-block" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

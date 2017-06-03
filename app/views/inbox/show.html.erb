@@ -1,0 +1,57 @@
+<div class="body-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 col-md-offset-1">
+        <h2 class="text-center">Reply to
+          <%= @user.name %></h2>
+        <br>
+        <div class="row">
+          <div class="col-md-4">
+            <%= image_tag @user.avatar.url(:medium), class: "avatarlarge center-block col-md-12"%>
+            <div class="text-center col-md-12">
+              <div class="profile-font-name"><%= @user.name %></div>
+              <div class="profile-font-town"><%= @user.home_town %></div>
+            </div>
+          </div>
+          <div class="col-md-8">
+
+            <%= form_tag(messages_path(user_to_id: @user.id, initial_message: false), method: :post) do %>
+            <textarea type="text" , name="content" cols="30" rows="8" placeholder="Enter your reply..."></textarea><br>
+
+            <%= submit_tag "Send", class:  "btn btn-primary" %>
+            <% end %>
+            <hr class="blackborder">
+            <% @messages.each do |message| %>
+            <div class="row">
+              <% if message.user_from_id == current_user.id %>
+              <div class="col-xs-9">
+                <div class="message-box-from">
+                  <div class="message-content">
+                    <%= message.content %>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-3">
+                <%= image_tag current_user.avatar.url(:medium), class: "avatarnano center-block"%>
+              </div>
+            <% else %>
+              <div class="col-xs-3">
+                <%= image_tag @user.avatar.url(:medium), class: "avatarnano center-block"%>
+              </div>
+              <div class="col-xs-9">
+                <div class="message-box-to">
+                  <div class="message-content">
+                    <%= message.content %>
+                  </div>
+                </div>
+              </div>
+              <% end %>
+            </div>
+            <hr class="transparent">
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

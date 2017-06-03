@@ -1,0 +1,24 @@
+
+<header>
+  <div class="header-content">
+    <div class="header-content-inner">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h1 id="homeHeading">Search someone needing your help!</h1>
+          <p>Find a demand matching to your next journey</p>
+          <div class="form-inline">
+            <div class="form-group">
+              <%= search_form_for @search, url: demandposts_path, method: :get do |f| %>
+              <%= f.text_field :city_from, id: "city_from", class: "form-control", placeholder: "From (Option)" %>
+              <%= f.text_field :city_to, id: "city_to", class: "form-control", placeholder: "To" %>
+
+              <%= f.submit 'Search a demand', class: "btn btn-primary" %>
+              <% end %>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
