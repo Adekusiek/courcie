@@ -4,6 +4,9 @@
       <div class="col-md-8 col-md-offset-2">
         <h2>Messages</h2>
         <hr class="blackborder">
+        <% unless @array.any? %>
+          <p>Currently you have no message.</p>
+        <% end %>
         <% @array.each do |user, lastmessage| %>
         <a href="/inbox/<%= lastmessage.messagebox_id %>" , class="post">
           <div class="row">

@@ -2,26 +2,6 @@ class MessageboxesController < ApplicationController
   before_action :set_messagebox, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
-  # GET /messageboxes
-  # GET /messageboxes.json
-  def index
-    @messageboxes = Messagebox.all
-  end
-
-  # GET /messageboxes/1
-  # GET /messageboxes/1.json
-  def show
-  end
-
-  # GET /messageboxes/new
-  def new
-    @messagebox = Messagebox.new
-  end
-
-  # GET /messageboxes/1/edit
-  def edit
-  end
-
   # POST /messageboxes
   # POST /messageboxes.json
   def create
@@ -38,19 +18,6 @@ class MessageboxesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /messageboxes/1
-  # PATCH/PUT /messageboxes/1.json
-  def update
-    respond_to do |format|
-      if @messagebox.update(messagebox_params)
-        format.html { redirect_to @messagebox, notice: 'Messagebox was successfully updated.' }
-        format.json { render :show, status: :ok, location: @messagebox }
-      else
-        format.html { render :edit }
-        format.json { render json: @messagebox.errors, status: :unprocessable_entity }
-      end
-    end
-  end
 
   # DELETE /messageboxes/1
   # DELETE /messageboxes/1.json
