@@ -7,10 +7,14 @@
         <br>
         <div class="row">
           <div class="col-md-4">
-            <%= image_tag @user.avatar.url(:medium), class: "avatarlarge center-block col-md-12"%>
-            <div class="text-center col-md-12">
-              <div class="profile-font-name"><%= @user.name %></div>
-              <div class="profile-font-town"><%= @user.home_town %></div>
+            <div class="row">
+              <div class="col-md-12">
+                <%= image_tag @user.avatar.url(:medium), class: "avatarlarge center-block"%>
+              </div>
+              <div class="text-center col-md-12">
+                <div class="profile-font-name"><%= @user.name %></div>
+                <div class="profile-font-town"><%= @user.home_town %></div>
+              </div>
             </div>
           </div>
           <div class="col-md-8">

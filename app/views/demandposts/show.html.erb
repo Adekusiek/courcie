@@ -5,13 +5,15 @@
         <% if @demandpost.user_id != current_user.id %>
         <h2>They are waiting your first message!</h2>
       <% else %>
-        <h2>Your announce is now posted!</h2>
+        <h2>Your announce is posted!</h2>
         <% end %>
         <hr class="blackborder">
         <div class="row">
           <div class="col-md-4">
-            <%= image_tag @demandpost.user.avatar.url(:medium), class: "avatarlarge"%>
-            <div class="text-center">
+            <div class="col-md-12">
+            <%= image_tag @demandpost.user.avatar.url(:medium), class: "avatarmedium center-block" %>
+          </div>
+            <div class="text-center col-md-12">
               <div class="profile-font-name"><%= @demandpost.user.name %></div>
               <div class="profile-font-town"><%= @demandpost.city_to %></div>
             </div>
@@ -58,6 +60,7 @@
             <div class="form-group">
               <%= link_to "Back", root_path, class: "btn btn-primary" %>
               <%= link_to "Edit", edit_demandpost_path(@demandpost), class: "btn btn-primary" %>
+              <%= link_to "Unpost", demandpost_path(@demandpost), method: :delete, class: "btn btn-primary" %>
             </div>
           </div>
         </div>
