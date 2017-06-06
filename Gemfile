@@ -80,7 +80,10 @@ group :development do
 end
 
 group :production do
+  # For uploarding images to heroku
   gem 'rails_12factor'
+  # AWS S3 setting
+  gem 'aws-sdk'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
