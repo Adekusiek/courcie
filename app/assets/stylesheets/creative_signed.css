@@ -36,7 +36,7 @@
   }
   .navbar-default-signed .navbar-header .navbar-brand:hover,
   .navbar-default-signed .navbar-header .navbar-brand:focus {
-    color: white;
+    color: orange;
   }
   .navbar-default-signed .nav > li > a,
   .navbar-default-signed .nav > li > a:focus {
@@ -44,7 +44,7 @@
   }
   .navbar-default-signed .nav > li > a:hover,
   .navbar-default-signed .nav > li > a:focus:hover {
-    color: white;
+    color: orange;
   }
   .navbar-default-signed.affix {
     background-color: white;
