@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   root 'top#index'
 
+  get 'porter' => 'porter#top', as: 'porter_top'
+
   get 'help' => 'help#index', as: 'help_index'
 
   get 'inbox' => 'inbox#index', as: "inbox_index"

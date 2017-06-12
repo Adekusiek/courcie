@@ -5,7 +5,7 @@
         <h2>Messages</h2>
         <hr class="blackborder">
         <% unless @array.any? %>
-          <p>Currently you have no message.</p>
+        <p>Currently you have no message.</p>
         <% end %>
         <% @array.each do |user, lastmessage| %>
         <a href="/inbox/<%= lastmessage.messagebox_id %>" , class="post">

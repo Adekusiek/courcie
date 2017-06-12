@@ -10,6 +10,10 @@
   width: 50%
 }
 
+.btn-navbar {
+  padding: 10px 10px 10px
+}
+
 .body-padding {
 	padding-top: 60px;
   min-height: 900px;

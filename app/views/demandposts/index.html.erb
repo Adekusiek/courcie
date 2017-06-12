@@ -17,20 +17,20 @@
               <div>
                 <div class="post-font-subtitle">Where to get</div>
                 <% if demandpost.city_from != "" %>
-                  <div class="post-font-detail"><%= demandpost.city_from %></div>
-                <% else %>
-                  <div class="post-font-detail"><%= ISO3166::Country.new(demandpost.country_from).name %></div>
+                <div class="post-font-detail"><%= demandpost.city_from %></div>
+              <% else %>
+                <div class="post-font-detail"><%= ISO3166::Country.new(demandpost.country_from).name %></div>
                 <% end %>
                 <div class="post-font-subtitle">What I want to get</div>
                 <div class="post-font-detail"><%= demandpost.item_description %></div>
                 <div class="post-font-subtitle">The choise of reward</div>
                 <div class="post-font-detail">
                   <% if demandpost.money_ok == true && demandpost.no_money_ok == true %>
-                  Money or Non manetary reward
+                  Money or Non monetary reward
                   <% elsif demandpost.money_ok == true %>
                   Money only
                   <% elsif demandpost.no_money_ok == true %>
-                  Non manetary reward only
+                  Non monetary reward only
                   <% end %>
                 </div>
                 <div class="post-font-subtitle">What I can offer you in return</div>

@@ -72,6 +72,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Become a Porter", porter_top_path %></li>
         <li><%= link_to "Ask a favor", new_demandpost_path %></li>
         <li><%= link_to "Message Box", inbox_index_path %></li>
         <li class="dropdown">
@@ -189,8 +190,6 @@
 </nav>
 
 <% end %>
-
-
   <%= yield %>
 </body>
 

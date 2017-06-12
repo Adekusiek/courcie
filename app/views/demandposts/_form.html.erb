@@ -1,4 +1,4 @@
-
+<div class="body-padding">
   <%= form_with(model: demandpost, local: true, class: "form-horizontal") do |f| %>
   <% if demandpost.errors.any? %>
   <div id="error_explanation">
@@ -13,7 +13,7 @@
   <% end %>
 
   <div class="text-center">
-    <h2 class="section-heading">Announcement</h2>
+    <h2 class="section-heading">Ask an errand service</h2>
   </div>
   <br>
 
@@ -35,7 +35,7 @@
         </div>
 
         <div class="form-group ">
-          <%= f.label :expire_date, "Expire at", class: "control-label col-md-3" %>
+          <%= f.label :expire_date, "Expire at (optional)", class: "control-label col-md-3" %>
           <div class="col-md-6">
             <%= f.date_field :expire_date,  class: "form-control datepicker" %>
 
@@ -44,7 +44,7 @@
         <hr>
 
         <div class="form-group">
-          <%= f.label :item_description, 'Item description', class: "control-label col-md-3" %>
+          <%= f.label :item_description, 'Items to bring', class: "control-label col-md-3" %>
           <div class="col-md-9">
             <%= f.text_area :item_description, class: "form-control", placeholder: "Ex. A camera kit and 3 books. My favorite chocolates" %>
           </div>
@@ -65,9 +65,11 @@
           </div>
         </div>
         <div class="form-group">
+          <p class="fine">Please fill in the form to show what you want. If your porter still have enough space in their suitcase, you will have their message. Your reward proposal should be attractive so that they are willing to help you.</p>
           <%= f.submit 'Post a demand', class: "btn btn-primary btn-post center-block" %>
         </div>
       </div>
     </div>
   </div>
   <% end %>
+</div>
