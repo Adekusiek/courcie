@@ -59,7 +59,7 @@ gem 'magnific-popup-rails'
 gem 'scrollreveal-rails'
 
 #gem 'jquery-turbolinks'
-gem 'country_select'
+#gem 'country_select'
 gem 'countries'
 
 gem 'carmen-rails'
