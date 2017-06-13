@@ -1,0 +1,66 @@
+<header>
+  <div class="header-content">
+    <div class="header-content-inner">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h1 id="homeHeading">Someone needs your help like you.</h1>
+          <p class="fine">If you still have enough space in your suitcase, you can bring items for someone needing your help.
+            You will find an announce of errand in COURCIE. Get a reward by international delivery. You can negotiate the reward for your errrand.</p>
+          <div class="form-inline">
+            <div class="form-group">
+              <%= search_form_for @search, url: demandposts_path, method: :get do |f| %>
+              <%= f.country_select :country_from_eq, {priority: %w(US CA), prompt: 'Please select a country'}, class: "form-control" %>
+              <%= f.text_field :city_to_cont, id: "city_to", class: "form-control", placeholder: "City To" %>
+
+              <%= f.submit 'Search a matching post', class: "btn btn-primary" %>
+              <% end %>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">How to use?</h2>
+        <hr class="primary">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="service-box">
+          <i class="fa fa-4x fa-search text-primary sr-icons"></i>
+          <h3>Find a demand</h3>
+          <p class="text-muted">Find a post matching to your travel and contact to them.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="service-box">
+          <i class="fa fa-4x fa-suitcase text-primary sr-icons"></i>
+          <h3>Buy and pack</h3>
+          <p class="text-muted">You will purchase the items and pack them into your suitcase.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="service-box">
+          <i class="fa fa-4x fa-plane text-primary sr-icons"></i>
+          <h3>Bring them</h3>
+          <p class="text-muted">Travel to your destination. Don't forget your suitcase!</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="service-box">
+          <i class="fa fa-4x fa-handshake-o text-primary sr-icons"></i>
+          <h3>You're done</h3>
+          <p class="text-muted">Exchange items with your rewards!</p>
+        </div>
+      </div>
+    </div>
+  </div>
