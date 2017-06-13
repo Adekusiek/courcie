@@ -59,8 +59,10 @@ gem 'magnific-popup-rails'
 gem 'scrollreveal-rails'
 
 #gem 'jquery-turbolinks'
-gem 'country_select'
-gem 'countries'
+# gem 'country_select'
+# gem 'countries'
+
+gem 'carmen-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

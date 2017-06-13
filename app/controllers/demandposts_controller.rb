@@ -9,7 +9,7 @@ class DemandpostsController < ApplicationController
     # from top page, params[:q] ic coming
     # just for city query
     # the search logic must be reevaluated
-    @search = Demandpost.search(city_to_or_city_from_country_from_cont_any: [params[:q][:city_to],params[:q][:city_from]] )
+    @search = Demandpost.search(params[:q])
     @demandposts = @search.result
 
     respond_to do |format|

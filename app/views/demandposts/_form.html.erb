@@ -29,8 +29,7 @@
         <div class="form-group">
           <%= f.label :city_from, "Where to get", class: "control-label col-md-3" %>
           <div class="col-md-6">
-            <%= f.country_select :country_from,  class: "form-control" %>
-            <%= f.text_field :city_from, id: :city_from, class: "form-control", placeholder: "City (Optional)" %>
+            <%= f.country_select :country_from, {priority: %w(US CA), prompt: 'Please select a country'}, class: "form-control" %>
           </div>
         </div>
 
