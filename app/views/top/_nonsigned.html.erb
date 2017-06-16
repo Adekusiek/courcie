@@ -7,12 +7,10 @@ $(document).ready(function(){
 <header>
   <div class="header-content">
     <div class="header-content-inner">
-      <h1 id="homeHeading">Ask International Errand</h1>
+      <h1 id="homeHeading"><%= t 'top._nonsigned.toptitle'%></h1>
       <hr>
-      <p>You won't find easily the items of your contry if you live in abroad.<br/>
-        You must pay more or wait to get your things.<br/>
-        Ask someone to do an errand for you!</p>
-      <a href="#howto" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+      <p><%= t 'top._nonsigned.subtitle'%></p>
+      <a href="#howto" class="btn btn-primary btn-xl page-scroll"><%= t 'top._nonsigned.titlebutton'%></a>
     </div>
   </div>
 </header>
@@ -21,13 +19,11 @@ $(document).ready(function(){
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 text-center">
-        <h2 class="section-heading">Be a porter in COURCIE</h2>
+        <h2 class="section-heading"><%= t 'top._nonsigned.abouttitle'%></h2>
         <hr class="light">
-        <p>Shortly leaving for abroad? Let's find someone asking an errand there.
-          <br/>
-          You will find an announce matching to your next destination.<br/>Bring items and get your reward!</p>
+        <p><%= t 'top._nonsigned.aboutcontent'%></p>
         <a class="page-scroll btn btn-default btn-xl sr-button" role="button" data-toggle="modal" data-target="#signup-modal" data-backdrop="static" data-controls-modal="signup-modal">
-          <b>Become a porter? Join us!</b>
+          <b><%= t 'top._nonsigned.aboutbutton'%></b>
         </a>
       </div>
     </div>
@@ -38,7 +34,7 @@ $(document).ready(function(){
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading">3 Reasons to join</h2>
+        <h2 class="section-heading"><%= t 'top._nonsigned.reasontitle'%></h2>
         <hr class="primary">
       </div>
     </div>
@@ -48,25 +44,22 @@ $(document).ready(function(){
       <div class="col-lg-4 col-md-6 text-center">
         <div class="service-box">
           <i class="fa fa-4x fa-money text-primary sr-icons"></i>
-          <h4>Low-cost</h4>
-          <p class="fine">If you are living outside of your country and still paying a double or tripple price for the domestic products, you can ask for a service of delivery.
-          You can get your things well cheaper than the shipping cost.</p>
+          <h4><%= t 'top._nonsigned.reasonhead1'%></h4>
+          <p class="fine"><%= t 'top._nonsigned.reasoncontent1'%></p>
         </div>
       </div>
       <div class="col-lg-4 col-md-6 text-center">
         <div class="service-box">
           <i class="fa fa-4x fa-hourglass-half text-primary sr-icons"></i>
-          <h4>Anyware, swiftly</h4>
-          <p class="fine">You are waiting for the arrival of your international shipment? You can skip the waiting time if someone is visiting your town shortly.
-          </p>
+          <h4><%= t 'top._nonsigned.reasonhead2'%></h4>
+          <p class="fine"><%= t 'top._nonsigned.reasoncontent2'%></p>
         </div>
       </div>
       <div class="col-lg-4 col-md-6 text-center">
         <div class="service-box">
           <i class="fa fa-4x fa-child text-primary sr-icons"></i>
-          <h4>No need for tracking</h4>
-          <p class="fine">International shipping is risky. Sometimes your package losts due to poor delivery service, or sometime shipped backed to for no reason. Stop checking the track record on the web. A porter will be in charge safe delivery.
-          </p>
+          <h4><%= t 'top._nonsigned.reasonhead3'%></h4>
+          <p class="fine"><%= t 'top._nonsigned.reasoncontent3'%></p>
         </div>
       </div>
     </div>
@@ -76,10 +69,9 @@ $(document).ready(function(){
 <aside class="bg-gray">
   <div class="container text-center">
     <div class="call-to-action">
-      <h2>What you can ask the errand for?</h2>
+      <h2><%= t 'top._nonsigned.errandtitle'%></h2>
       <hr class="light">
-      <p>Professional items, books in your mother langage, cameras... <br>Cheese, spices, .... you like paying double or trriple price?
-      <br>Someone visiting your town shortly will buy and bring them!</p>
+      <p><%= t 'top._nonsigned.errandcontent'%></p>
       <!--        <%= link_to "Sign In", new_user_session_path , class: "btn btn-default btn-xl sr-button" %> -->
     </div>
   </div>
@@ -89,9 +81,9 @@ $(document).ready(function(){
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 text-center">
-        <h2 class="section-heading">Contact us!</h2>
+        <h2 class="section-heading"><%= t 'top._nonsigned.contacttitle'%></h2>
         <hr class="primary">
-        <p>We continuously improve our sevice. Send us an email for your feedback to help us!</p>
+        <p><%= t 'top._nonsigned.contactcontent'%></p>
       </div>
       <div class="col-lg-4 col-lg-offset-4 text-center">
         <i class="fa fa-envelope-o fa-3x sr-contact"></i>
@@ -106,10 +98,8 @@ $(document).ready(function(){
 <aside class="bg-lavender">
   <div class="container text-center">
     <div class="call-to-action">
-      <h3>Legal notice</h3>
-      <p>
-It is not allowed to trade products forbidden under international law, such as money, rare animals, narcotics. Users of the services need to transport according to the import laws of each country.
-This site is not responsible for any problems caused by using the service. Also we are not responsible for financial troubles arising between users of the service.</p>
+      <h3><%= t 'top._nonsigned.legaltitle'%></h3>
+      <p><%= t 'top._nonsigned.legalcontent'%></p>
     </div>
   </div>
 </aside>

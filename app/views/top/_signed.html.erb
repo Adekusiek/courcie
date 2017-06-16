@@ -2,9 +2,9 @@
   <div class="section-top">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <h3>Find your porter</h2>
-        <p class="fine">Just post your purchase list. You'll be contacted from a porter who visit your city soon. Let's get started.</p>
-        <%= link_to "Ask a favor", new_demandpost_path, class:"btn btn-primary btn-large center-block" %>
+        <h3><%= t 'top._signed.toptitle'%></h2>
+        <p class="fine"><%= t 'top._signed.subtitle'%></p>
+        <%= link_to  t('top._signed.titlebutton'), new_demandpost_path, class:"btn btn-primary btn-large center-block" %>
       </div>
     </div>
   </div>
@@ -13,7 +13,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h3>Tips for a good anounce</h3>
+          <h3><%= t 'top._signed.tipstitle'%></h3>
           <hr class="primary">
         </div>
       </div>
@@ -22,20 +22,20 @@
       <div class="row">
         <div class="col-lg-4 col-md-4 text-center">
           <div class="service-box">
-            <h4>Describe what you want</h4>
-            <p class="fine">The announce should be descriptive to make understand your porter what exactly you wants. It may be good if you can post a webpage link to that product.</p>
+            <h4><%= t 'top._signed.tipshead1'%></h4>
+            <p class="fine"><%= t 'top._signed.tipscontent1'%></p>
           </div>
         </div>
         <div class="col-lg-4 col-md-4 text-center">
           <div class="service-box">
-            <h4>Propose a good reward</h4>
-            <p class="fine">You should propose an attractive reward for their work. The service is not a free! If it's just a small amount of purchase, non-monetary reward would be a good choice like a free lunch!</p>
+            <h4><%= t 'top._signed.tipshead2'%></h4>
+            <p class="fine"><%= t 'top._signed.tipscontent2'%></p>
           </div>
         </div>
         <div class="col-lg-4 col-md-4 text-center">
           <div class="service-box">
-            <h4>Fix a good meeting point</h4>
-            <p class="fine">The porter might visit your town for the first time. Be sure that you will not miss in a crowd!</p>
+            <h4><%= t 'top._signed.tipshead3'%></h4>
+            <p class="fine"><%= t 'top._signed.tipscontent3'%></p>
           </div>
         </div>
       </div>
@@ -47,9 +47,9 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-xs-6 col-lg-offset-1 col-xs-offset-3">
-            <h3>Leaving for a trip?</h3>
-            <p class="fine">Become a porter. Do a small errand, and have a reward. You might have a local experience that you won't imagine.</p>
-            <%= link_to "Become a porter", porter_top_path, class:"btn btn-primary btn-xl"%>
+            <h3><%= t 'top._signed.porterlinktitle'%></h3>
+            <p class="fine"><%= t 'top._signed.porterlinkcontent'%></p>
+            <%= link_to  t('top._signed.porterlinkbutton'), porter_top_path, class:"btn btn-primary btn-xl"%>
           </div>
         </div>
       </div>
@@ -60,7 +60,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading">How to start?</h2>
+          <h2 class="section-heading"><%= t 'top._signed.howtotitle'%></h2>
           <hr class="primary">
         </div>
       </div>
@@ -70,31 +70,29 @@
         <div class="col-lg-3 col-md-6 text-center">
           <div class="service-box">
             <i class="fa fa-4x fa-edit text-primary sr-icons"></i>
-            <h3>Post an announce</h3>
-            <p class="text-muted">Post an announce for errand. A porter will contact you.</p>
+            <h3><%= t 'top._signed.howtohead1'%></h3>
+            <p class="text-muted"><%= t 'top._signed.howtocontent1'%></p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="service-box">
             <i class="fa fa-4x fa-suitcase text-primary sr-icons"></i>
-            <h3>Contact with porter</h3>
-            <p class="text-muted">Confirm what you give in return. Make sure when & where to meet.
-            </p>
+            <h3><%= t 'top._signed.howtohead2'%></h3>
+            <p class="text-muted"><%= t 'top._signed.howtocontent2'%></p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="service-box">
             <i class="fa fa-4x fa-plane text-primary sr-icons"></i>
-            <h3>Wait the visit</h3>
-            <p class="text-muted">Porter will purchase the items and bring them to your city on their flight.
-            </p>
+            <h3><%= t 'top._signed.howtohead3'%></h3>
+            <p class="text-muted"><%= t 'top._signed.howtocontent3'%></p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="service-box">
             <i class="fa fa-4x fa-handshake-o text-primary sr-icons"></i>
-            <h3>Get your items</h3>
-            <p class="text-muted">Give them a reward for the errand, and get your items!</p>
+            <h3><%= t 'top._signed.howtohead4'%></h3>
+            <p class="text-muted"><%= t 'top._signed.howtocontent4'%></p>
           </div>
         </div>
       </div>
@@ -104,10 +102,8 @@
   <aside class="bg-ghostwhite">
     <div class="container text-center">
       <div class="call-to-action">
-        <h3>Legal notice</h3>
-        <p class="fine">
-          It is not allowed to trade products forbidden under international law, such as money, rare animals, narcotics. Users of the services need to transport according to the import laws of each country. This site is not responsible for any problems caused
-          by using the service. Also we are not responsible for financial troubles arising between users of the service.</p>
+        <h3><%= t 'top._signed.legaltitle'%></h3>
+        <p class="fine"><%= t 'top._signed.legalcontent'%></p>
       </div>
     </div>
   </aside>

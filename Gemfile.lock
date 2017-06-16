@@ -291,6 +291,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   font-awesome-rails
+  i18n
   jbuilder (= 2.6.4)
   jquery-easing-rails
   jquery-rails

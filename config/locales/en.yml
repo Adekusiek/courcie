@@ -1,33 +1,67 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  demandposts:
+  inbox:
+  messages:
+  porter:
+    top:
+      toptitle: Someone needs your help like you.
+      subtitle: If you still have enough space in your suitcase, you can bring items for someone needing your help. You will find an announce of errand in COURCIE. Get a reward by international delivery. You can negotiate the reward for your errrand.
+      fromcountrytab: Select a country you leave
+      tocitytab: City To
+      searchbutton: Search a matching post
+      howtotitle: How to use?
+      howtohead1: Find a demand
+      howtocontent1: Find a post matching to your travel and contact to them.
+      howtohead2: Buy and pack
+      howtocontent2: You will purchase the items and pack them into your suitcase.
+      howtohead3: Bring them
+      howtocontent3: Travel to your destination. Don't forget your suitcase!
+      howtohead4: You're done
+      howtocontent4: Exchange items with your rewards!
+  top:
+    _nonsigned:
+      toptitle: Ask International Errand
+      subtitle: You won't find easily the items of your contry if you live in abroad. You must pay more or wait to get your things. Ask someone to do an errand for you!
+      titlebutton: Find Out More
+      abouttitle: Be a porter in COURCIE
+      aboutcontent: Shortly leaving for abroad? Let's find someone asking an errand there. You will find an announce matching to your next destination. Bring items and get your reward!
+      aboutbutton: Become a porter? Join us!
+      reasontitle: 3 Reasons to join
+      reasonhead1: Low-cost
+      reasoncontent1: If you are living outside of your country and still paying a double or tripple price for the domestic products, you can ask for a service of delivery. You can get your things well cheaper than the shipping cost.
+      reasonhead2: Anyware, swiftly
+      reasoncontent2: You are waiting for the arrival of your international shipment? You can skip the waiting time if someone is visiting your town shortly.
+      reasonhead3: No need for tracking
+      reasoncontent3: International shipping is risky. Sometimes your package losts due to poor delivery service, or sometime shipped backed to for no reason. Stop checking the track record on the web. A porter will be in charge safe delivery.
+      errandtitle: What you can ask the errand for?
+      errandcontent: Professional items, books in your mother langage, cameras... Cheese, spices, .... you like paying double or trriple price? Someone visiting your town shortly will buy and bring them!
+      contactitle: Contact us!
+      contactcontent: We continuously improve our sevice. Send us an email for your feedback to help us!
+      legaltitle: Legal notice
+      legalcontent: It is not allowed to trade products forbidden under international law, such as money, rare animals, narcotics. Users of the services need to transport according to the import laws of each country. This site is not responsible for any problems caused by using the service. Also we are not responsible for financial troubles arising between users of the service.
+    _signed:
+      toptitle: Find your porter
+      subtitle: Just post your purchase list. You'll be contacted from a porter who visit your city soon. Let's get started.
+      titlebutton: Ask a favor
+      tipstitle: Tips for a good anounce
+      tipshead1: Describe what you want
+      tipscontent1: The announce should be descriptive to make understand your porter what exactly you wants. It may be good if you can post a webpage link to that product.
+      tipshead2: Propose a good reward
+      tipscontent2: You should propose an attractive reward for their work. The service is not a free! If it's just a small amount of purchase, non-monetary reward would be a good choice like a free lunch!
+      tipshead3: Fix a good meeting point
+      tipscontent3: The porter might visit your town for the first time. Be sure that you will not miss in a crowd!
+      porterlinktitle: Leaving for a trip?
+      porterlinkcontent: Become a porter. Do a small errand, and have a reward. You might have a local experience that you won't imagine.
+      porterlinkbutton: Become a porter
+      howtotitle: How to start?
+      howtohead1: Post an announce
+      howtocontent1: Post an announce for errand. A porter will contact you.
+      howtohead2: Contact with porter
+      howtocontent2: Confirm what you give in return. Make sure when & where to meet.
+      howtohead3: Wait the visit
+      howtocontent3: Porter will purchase the items and bring them to your city on their flight.
+      howtohead4: Get your items
+      howtocontent4: Give them a reward for the errand, and get your items!
+      legaltitle: Legal notice
+      legalcontent: It is not allowed to trade products forbidden under international law, such as money, rare animals, narcotics. Users of the services need to transport according to the import laws of each country. This site is not responsible for any problems caused by using the service. Also we are not responsible for financial troubles arising between users of the service.
+  users:
