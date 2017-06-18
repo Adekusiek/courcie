@@ -2,7 +2,7 @@
   <div class="row form">
     <div class="col-lg-8 col-lg-offset-2">
       <%= form_for current_user do |f| %>
-      <h2>Edit Profile</h2>
+      <h2><%= t('.editprofile') %></h2>
       <div class="col-lg-4">
         <%= image_tag current_user.avatar.url(:medium), class: "avatarlarge center-block" %>
 
@@ -10,17 +10,23 @@
           <%= f.file_field :avatar, class: "form-control floating-label", placeholder: "画像アップロード" %>
         </div>
       </div>
-      <div class="col-lg-8 form-horizontal">
+      <div class="col-lg-7 form-horizontal">
         <div class="form-group">
-          <%= f.label "Living town", class: "control-label col-lg-2" %>
-          <div class="col-lg-10">
-            <%= f.text_field :home_town, placeholder: "Living in...", id: :city_from, class: "form-control" %>
+          <%= f.label t('.livingtown'), class: "control-label col-lg-3" %>
+          <div class="col-lg-9">
+            <%= f.text_field :home_town, placeholder: t('.livingtown_placeholder'), id: :city_from, class: "form-control" %>
+          </div>
+          <div class= "col-lg-offset-3 col-lg-9 profile-show">
+            <%= current_user.home_town %>
           </div>
         </div>
         <div class="form-group">
-          <%= f.label "Name", class: "control-label col-lg-2" %>
-          <div class="col-lg-10">
-            <%= f.text_field :name, class: "form-control" %>
+          <%= f.label t('.name'), class: "control-label col-lg-3" %>
+          <div class="col-lg-9">
+            <%= f.text_field :name, placeholder: t('.name_placeholder'), class: "form-control" %>
+          </div>
+          <div class= "col-lg-offset-3 col-lg-9 profile-show">
+            <%= current_user.name %>
           </div>
         </div>
       </div>
@@ -30,7 +36,7 @@
     <div class="col-lg-8 col-lg-offset-2">
 
       <div class="form-group">
-        <%= f.submit "submit", class: "btn btn-primary withripple btn-post center-block" %>
+        <%= f.submit t('.submitbutton'), class: "btn btn-primary withripple btn-post center-block" %>
       </div>
       <% end %>
     </div>

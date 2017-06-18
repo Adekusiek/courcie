@@ -65,6 +65,7 @@ gem 'countries'
 
 #gem 'carmen-rails'
 gem 'rails-i18n'
+gem 'paperclip-i18n'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

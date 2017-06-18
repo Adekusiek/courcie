@@ -2,7 +2,7 @@ en:
   layouts:
     application:
       porterlink: Become a Porter
-      favorlink: Ask a favor
+      favorlink: Make a request
       messagelink: Message Box
       logoutlink: Log Out
       profilelink: Edit Profile
@@ -10,18 +10,19 @@ en:
       benefitlink: Benefits
   demandposts:
     _form:
-      title: Ask an errand service
+      title: Make a request
+      editprofile: Complete my profile
       city_to: Your City
-      country_from: Where to get
+      country_from: Country of item
       country_placeholder: Please select a country
-      expire_date: Expire at (optional)
+      expire_date: Request expires (optional)
       item_description: Items to bring
       item_description_placeholder: Ex. A camera kit and 3 books. My favorite chocolates
       money_ok: Money
       no_money_ok: Not Money
       reward_description: Possible reward description
       reward_description_placeholder: Ex. A lunch in local restraurant....or 20$
-      footercomment: Please fill in the form to show what you want. If your porter still have enough space in their suitcase, you will have their message. Your reward proposal should be attractive so that they are willing to help you.
+      footercomment: Please fill in the form to show what you want. If your porter still has enough space in their suitcase, they will send you a message. Your reward proposal should be attractive so that they are willing to help you.
       submitbutton: Post a demand
     index:
       country_from: Where to get
@@ -94,7 +95,7 @@ en:
     _signed:
       toptitle: Find your porter
       subtitle: Just post your purchase list. You'll be contacted from a porter who visit your city soon. Let's get started.
-      titlebutton: Ask a favor
+      titlebutton: Make a request
       tipstitle: Tips for a good anounce
       tipshead1: Describe what you want
       tipscontent1: The announce should be descriptive to make understand your porter what exactly you wants. It may be good if you can post a webpage link to that product.
@@ -117,3 +118,10 @@ en:
       legaltitle: Legal notice
       legalcontent: It is not allowed to trade products forbidden under international law, such as money, rare animals, narcotics. Users of the services need to transport according to the import laws of each country. This site is not responsible for any problems caused by using the service. Also we are not responsible for financial troubles arising between users of the service.
   users:
+    edit:
+      editprofile: Edit Profile
+      livingtown: My town
+      livingtown_placeholder: Put your city you are living in
+      name: Name
+      name_placeholder: Your name here
+      submitbutton:  submit

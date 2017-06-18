@@ -11,6 +11,7 @@ ja:
   demandposts:
     _form:
       title: お使いを頼む
+      editprofile: 基本情報の設定
       city_to: あなたの町
       country_from: どの国で買うか
       country_placeholder: 国名を選択
@@ -117,3 +118,10 @@ ja:
       legaltitle: 注意事項
       legalcontent: お金、動物、麻薬など、国際法の下で禁止されている製品の取引は許可されていません。ユーザーは、各国の輸入法に従って輸送する必要があります。このサイトは、サービスの使用に起因する問題については責任を負いません。サービスの利用者の間で生じる問題には責任を負いません。
   users:
+    edit:
+      editprofile: プロフィールの編集
+      livingtown: 居住地
+      livingtown_placeholder: 現在居住地の入力
+      name: 名前
+      name_placeholder: 名前を入力
+      submitbutton:  プロフィールの更新
