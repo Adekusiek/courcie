@@ -64,7 +64,7 @@ gem 'country_select'
 gem 'countries'
 
 #gem 'carmen-rails'
-gem 'i18n'
+gem 'rails-i18n'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

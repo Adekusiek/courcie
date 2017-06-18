@@ -1,4 +1,13 @@
 ja:
+  layouts:
+    application:
+      porterlink: お使いをする
+      favorlink: お使いを頼む
+      messagelink: メッセージ
+      logoutlink: ログアウト
+      profilelink: プロフィール編集
+      aboutlink: 詳しく見る
+      benefitlink: 特徴
   demandposts:
   inbox:
   messages:
@@ -35,13 +44,13 @@ ja:
       reasoncontent3: 国際配送は危険です。時々あなたの荷物は不十分な配達サービスのせいでロストするか、何の理由もなく返送されます。お使いを頼めば、より安全にあなたまで届きます。
       errandtitle: どんなお使いを頼めばいいのか?
       errandcontent: 自国にしかない専門的なアイテム, 本、カメラ、チーズ、お米...海外では買えないものはたくさんあります。自国から航空便で送れないものもあります。何より、国内で買うのと比べて2,3倍する物はたくさんあります。
-      contactitle: お問い合わせ
+      contacttitle: お問い合わせ
       contactcontent: 私たちは常により良いサービスを提供したいと考えております。サービス向上のために、フィードバックなどをいただけると幸いです。
       legaltitle: 注意事項
       legalcontent: お金、動物、麻薬など、国際法の下で禁止されている製品の取引は許可されていません。ユーザーは、各国の輸入法に従って輸送する必要があります。このサイトは、サービスの使用に起因する問題については責任を負いません。サービスの利用者の間で生じる問題には責任を負いません。
     _signed:
       toptitle: お使いを頼む
-      subtitle: あなたが買ってきて欲しいもののリストを投稿しましょう。Just post your purchase list. まもなくあなたの都市を訪れる人から連絡があります。さあ、始めましょう。
+      subtitle: あなたが買ってきて欲しいもののリストを投稿しましょう。まもなくあなたの都市を訪れる人から連絡があります。さあ、始めましょう。
       titlebutton: 投稿する
       tipstitle: 良い投稿のヒント
       tipshead1: 何が欲しいのかを書く

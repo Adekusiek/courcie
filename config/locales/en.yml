@@ -1,4 +1,13 @@
 en:
+  layouts:
+    application:
+      porterlink: Become a Porter
+      favorlink: Ask a favor
+      messagelink: Message Box
+      logoutlink: Log Out
+      profilelink: Edit Profile
+      aboutlink: About
+      benefitlink: Benefits
   demandposts:
   inbox:
   messages:
@@ -35,7 +44,7 @@ en:
       reasoncontent3: International shipping is risky. Sometimes your package losts due to poor delivery service, or sometime shipped backed to for no reason. Stop checking the track record on the web. A porter will be in charge safe delivery.
       errandtitle: What you can ask the errand for?
       errandcontent: Professional items, books in your mother langage, cameras... Cheese, spices, .... you like paying double or trriple price? Someone visiting your town shortly will buy and bring them!
-      contactitle: Contact us!
+      contacttitle: Contact us!
       contactcontent: We continuously improve our sevice. Send us an email for your feedback to help us!
       legaltitle: Legal notice
       legalcontent: It is not allowed to trade products forbidden under international law, such as money, rare animals, narcotics. Users of the services need to transport according to the import laws of each country. This site is not responsible for any problems caused by using the service. Also we are not responsible for financial troubles arising between users of the service.

@@ -66,24 +66,39 @@
         Menu
         <i class="fa fa-bars"></i>
       </button>
-      <a class="navbar-brand page-scroll" href="/">Courcie</a>
+      <%= link_to "Courcie", top_path, class: "navbar-brand page-scroll"%>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Become a Porter", porter_top_path %></li>
-        <li><%= link_to "Ask a favor", new_demandpost_path %></li>
-        <li><%= link_to "Message Box", inbox_index_path %></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="sr-only">Toggle navigation</span><i class="fa fa-language fa-lg"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <% I18n.available_locales.each do |locale| %>
+              <% if locale == :en %>
+                <% lang = "English" %>
+              <% elsif locale == :ja %>
+                <% lang = "日本語" %>
+              <% end %>
+              <li><%= link_to(lang, url_for(locale: locale)) %></li>
+            <% end %>
+          </ul>
+        </li>
+        <li><%= link_to t('.porterlink'), porter_top_path %></li>
+        <li><%= link_to t('.favorlink'), new_demandpost_path %></li>
+        <li><%= link_to t('.messagelink'), inbox_index_path %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle avatar" data-toggle="dropdown">
             <span><%= image_tag current_user.avatar.url(:medium), class: "avatarmicro"%></span>
 
           </a>
           <ul id="login-dp-signed" class="dropdown-menu">
-            <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+            <li><%= link_to t('logoutlink'), destroy_user_session_path, method: :delete %></li>
             <li role="separator" class="divider"></li>
-            <li><%= link_to "Edit Profile", edit_user_path(current_user) %></li>
+            <li><%= link_to t('profilelink'), edit_user_path(current_user) %></li>
           </ul>
         </li>
       </ul>
@@ -105,17 +120,17 @@
         Menu
         <i class="fa fa-bars"></i>
       </button>
-      <a class="navbar-brand page-scroll" href="/">Courcie</a>
+      <%= link_to "Courcie", top_path, class: "navbar-brand page-scroll"%>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <a class="page-scroll" href="#about">About</a>
+          <a class="page-scroll" href="#about"><%= t('.aboutlink')%></a>
         </li>
         <li>
-          <a class="page-scroll" href="#benefit">Benefits</a>
+          <a class="page-scroll" href="#benefit"><%= t('.benefitlink')%></a>
         </li>
         <li>
             <a role="button" data-toggle="modal" data-target="#signup-modal" data-backdrop="static" data-controls-modal="signup-modal">
