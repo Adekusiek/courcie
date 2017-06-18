@@ -4,7 +4,7 @@
       <div class="col-md-8 col-md-offset-2">
         <hr class="blackborder">
         <% @demandposts.each do |demandpost| %>
-        <a href="/demandposts/<%= demandpost.id %>" class="post">
+        <a href="<%= url_for(demandpost) %>" class="post">
           <div class="row">
             <div class="col-md-4">
               <%= image_tag demandpost.user.avatar.url(:medium), class: "avatarmedium center-block"%>
@@ -15,21 +15,21 @@
             </div>
             <div class="col-md-8">
               <div>
-                <div class="post-font-subtitle">Where to get</div>
+                <div class="post-font-subtitle"><%= t('.country_from') %></div>
                 <div class="post-font-detail"><%= ISO3166::Country.new(demandpost.country_from).name %></div>
-                <div class="post-font-subtitle">What I want to get</div>
+                <div class="post-font-subtitle"><%= t('.item_description') %></div>
                 <div class="post-font-detail"><%= demandpost.item_description %></div>
-                <div class="post-font-subtitle">The choise of reward</div>
+                <div class="post-font-subtitle"><%= t('.reward_type_header') %></div>
                 <div class="post-font-detail">
                   <% if demandpost.money_ok == true && demandpost.no_money_ok == true %>
-                  Money or Non monetary reward
+                    <%= t('.reward_type1') %>
                   <% elsif demandpost.money_ok == true %>
-                  Money only
+                    <%= t('.reward_type2') %>
                   <% elsif demandpost.no_money_ok == true %>
-                  Non monetary reward only
+                    <%= t('.reward_type3') %>
                   <% end %>
                 </div>
-                <div class="post-font-subtitle">What I can offer you in return</div>
+                <div class="post-font-subtitle"><%= t('.reward_description') %></div>
                 <div class="post-font-detail"><%= demandpost.reward_description %></div>
               </div>
             </div>

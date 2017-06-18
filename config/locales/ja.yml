@@ -9,7 +9,50 @@ ja:
       aboutlink: 詳しく見る
       benefitlink: 特徴
   demandposts:
+    _form:
+      title: お使いを頼む
+      city_to: あなたの町
+      country_from: どの国で買うか
+      country_placeholder: 国名を選択
+      expire_date: アナウンスの有効期限（任意）
+      item_description: お使いのリスト
+      item_description_placeholder: 例：カメラ、３冊の専門書、米３kg
+      money_ok: 金銭的報酬
+      no_money_ok: 非金銭的報酬
+      reward_description: お使いの報酬
+      reward_description_placeholder: 例：購入金額＋3000円、もしくはフリーランチ
+      footercomment: お使いを頼むために詳細を入力しましょう。お使いをしてもらうには、報酬が魅力的である必要があります。もしお使いをする人が現れない場合は、報酬を上げる必要があるでしょう。
+      submitbutton: お使いを頼む
+    index:
+      country_from: どの国で購入するか
+      item_description: 買ってきて欲しいもの
+      reward_type_header: 可能な報酬の種類
+      reward_type1: 金銭もしくは非金銭的報酬
+      reward_type2: 金銭のみ
+      reward_type3: 非金銭の報酬のみ
+      reward_description: 報酬の詳細
+    show:
+      title_porter: 最初のメッセージを送りましょう
+      title_announcer: あなたのアナウンスは掲載されています
+      country_from: どの国で購入するか
+      item_description: 買ってきて欲しいもの
+      reward_type_header: 可能な報酬の種類
+      reward_type1: 金銭もしくは非金銭的報酬
+      reward_type2: 金銭のみ
+      reward_type3: 非金銭の報酬のみ
+      reward_description: 報酬の詳細
+      first_message_placeholder: 例：こんにちは。３日後に日本からバルセロナに旅行します。 掲載されている物を持っていく余裕がスーツケースにあるので、お使いしたいと思います。受け渡し日時を決めたいので、どこかわかりやすい場所を指定してもらえないでしょうか。
+      first_message_button: お使いを申し出る
+      back_button: 戻る
+      edit_button: 編集する
+      unpost_button: 掲載をやめる
   inbox:
+    index:
+      messages: メッセージ
+      no_message: 現在メッセージはありません
+    show:
+      send_placeholder: メッセージを入力する
+      send_button: 送信
   messages:
   porter:
     top:

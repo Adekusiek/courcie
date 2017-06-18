@@ -96,9 +96,9 @@
 
           </a>
           <ul id="login-dp-signed" class="dropdown-menu">
-            <li><%= link_to t('logoutlink'), destroy_user_session_path, method: :delete %></li>
+            <li><%= link_to t('.logoutlink'), destroy_user_session_path, method: :delete %></li>
             <li role="separator" class="divider"></li>
-            <li><%= link_to t('profilelink'), edit_user_path(current_user) %></li>
+            <li><%= link_to t('.profilelink'), edit_user_path(current_user) %></li>
           </ul>
         </li>
       </ul>

@@ -2,8 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-9 col-md-offset-1">
-        <h2 class="text-center">Reply to
-          <%= @user.name %></h2>
+
         <br>
         <div class="row">
           <div class="col-md-4">
@@ -20,9 +19,8 @@
           <div class="col-md-8">
 
             <%= form_tag(messages_path(user_to_id: @user.id, initial_message: false), method: :post) do %>
-            <textarea type="text" , name="content" cols="30" rows="8" placeholder="Enter your reply..."></textarea><br>
-
-            <%= submit_tag "Send", class:  "btn btn-primary" %>
+            <textarea type="text" , name="content" cols="30" rows="8" placeholder="<%= t('.send_placeholder')%>"></textarea><br>
+            <%= submit_tag t('.send_button'), class:  "btn btn-primary" %>
             <% end %>
             <hr class="blackborder">
             <% @messages.each do |message| %>

@@ -2,13 +2,13 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <h2>Messages</h2>
+        <h2><%= t('.messages') %></h2>
         <hr class="blackborder">
         <% unless @array.any? %>
-        <p>Currently you have no message.</p>
+        <p><%= t('.no_message') %></p>
         <% end %>
         <% @array.each do |user, lastmessage| %>
-        <a href="/inbox/<%= lastmessage.messagebox_id %>" , class="post">
+        <%= link_to inbox_personal_path(lastmessage.messagebox_id), class: "post" do %>
           <div class="row">
             <div class="col-md-2">
               <%= image_tag user.avatar.url(:medium), class: "avatarsmall center-block"%>
@@ -24,7 +24,7 @@
               <div class="profile-font-town"><%= lastmessage.content%></div>
             </div>
           </div>
-        </a>
+        <% end %>
         <hr class="blackborder">
 
         <% end %>

@@ -3,9 +3,9 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <% if @demandpost.user_id != current_user.id %>
-        <h2>They are waiting your first message!</h2>
+        <h2><%= t('.title_porter') %></h2>
       <% else %>
-        <h2>Your announce is posted!</h2>
+        <h2><%= t('.title_announcer') %></h2>
         <% end %>
         <hr class="blackborder">
         <div class="row">
@@ -20,21 +20,21 @@
           </div>
           <div class="col-md-8">
             <div>
-              <div class="post-font-subtitle">Where to get</div>
+              <div class="post-font-subtitle"><%= t('.country_from') %></div>
               <div class="post-font-detail"><%= @c.name %></div>
-              <div class="post-font-subtitle">What I want to get</div>
+              <div class="post-font-subtitle"><%= t('.item_description') %></div>
               <div class="post-font-detail"><%= @demandpost.item_description %></div>
-              <div class="post-font-subtitle">The choise of reward</div>
+              <div class="post-font-subtitle"><%= t('.reward_type_header') %></div>
               <div class="post-font-detail">
                 <% if @demandpost.money_ok == true && @demandpost.no_money_ok == true %>
-                Money or Non manetary reward
+                <%= t('.reward_type1') %>
                 <% elsif @demandpost.money_ok == true %>
-                Money only
+                <%= t('.reward_type2') %>
                 <% elsif @demandpost.no_money_ok == true %>
-                Non manetary reward only
+                <%= t('.reward_type3') %>
                 <% end %>
               </div>
-              <div class="post-font-subtitle">What I can offer you in return</div>
+              <div class="post-font-subtitle"><%= t('.reward_description') %></div>
               <div class="post-font-detail"><%= @demandpost.reward_description %></div>
             </div>
           </div>
@@ -46,10 +46,9 @@
           <div class="col-md-12">
             <div class="form-group">
               <%= form_tag(messages_path(user_to_id: @demandpost.user.id, initial_message: true), method: :post) do %>
-              <textarea type="text" , name="content" cols="30" rows="5" class="form-control" , placeholder="Hi I'm Kevin. I'll visit Barcelona the day after tomorrow and stay 1 one week. I still have a space in my suitcase to bring items. Please recontact me!"></textarea>
+              <textarea type="text" , name="content" cols="30" rows="5" class="form-control" , placeholder= "<%= t('.first_message_placeholder') %>"></textarea>
               <br/>
-
-              <%= submit_tag "I Can Help you!", class:  "btn btn-primary btn-post center-block" %>
+              <%= submit_tag t('.first_message_button'), class:  "btn btn-primary btn-post center-block" %>
               <% end %>
             </div>
           </div>
@@ -58,9 +57,9 @@
         <div class="row">
           <div class="col-md-12">
             <div class="form-group">
-              <%= link_to "Back", root_path, class: "btn btn-primary" %>
-              <%= link_to "Edit", edit_demandpost_path(@demandpost), class: "btn btn-primary" %>
-              <%= link_to "Unpost", demandpost_path(@demandpost), method: :delete, class: "btn btn-primary" %>
+              <%= link_to t('.back_button'), root_path, class: "btn btn-primary" %>
+              <%= link_to t('.edit_button'), edit_demandpost_path(@demandpost), class: "btn btn-primary" %>
+              <%= link_to t('.unpost_button'), demandpost_path(@demandpost), method: :delete, class: "btn btn-primary" %>
             </div>
           </div>
         </div>
