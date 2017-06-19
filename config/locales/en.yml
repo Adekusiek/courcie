@@ -5,9 +5,7 @@ en:
       favorlink: Make a request
       messagelink: Message Box
       logoutlink: Log Out
-      profilelink: Edit Profile
-      aboutlink: About
-      benefitlink: Benefits
+      profilelink: User Page
   demandposts:
     _form:
       title: Make a request
@@ -57,24 +55,41 @@ en:
   messages:
   porter:
     top:
-      toptitle: Someone needs your help like you.
-      subtitle: If you still have enough space in your suitcase, you can bring items for someone needing your help. You will find an announce of errand in COURCIE. Get a reward by international delivery. You can negotiate the reward for your errrand.
-      fromcountrytab: Select a country you leave
-      tocitytab: City To
+      toptitle: A journey with a service
+      subtitle: If you plan to travel abroad soon, if there is space in the suitcase, you can put items for someone and make good with that space. Let's use COURCIE to find the posts of those who need help outside of your country. And let's get the reward.
+      fromcountrytab: Country of residence
+      signupbutton : Be a Porter in COURCIE
+      tocitytab: City traveling to
       searchbutton: Search a matching post
-      howtotitle: How to use?
-      howtohead1: Find a demand
-      howtocontent1: Find a post matching to your travel and contact to them.
-      howtohead2: Buy and pack
-      howtocontent2: You will purchase the items and pack them into your suitcase.
-      howtohead3: Bring them
-      howtocontent3: Travel to your destination. Don't forget your suitcase!
-      howtohead4: You're done
-      howtocontent4: Exchange items with your rewards!
+      flow: International porting flow
+      flowtitle1: Search a request
+      flowsubtitle1: Check the request from the person who lives in your travel destination.
+      flowhead11: Check point A to B
+      flowcontent11: Requests are matched from A (your country of residence) to B (overseas town you will travel from now). If you do not have a request, let's register your itinerary so that you can receive a notice.
+      flowhead12: Confirm a request list
+      flowcontent12: Check the list of items they want you to carry. Let's judge if there is enough space to carry to the suitcase or you can get it without hassle.
+      flowhead13: Be sure the reward
+      flowcontent13: Let's choose a request that will give you a reward matching to your labor price. There are requests not only for monetary compensation but also proposals for experiential non-monetary rewards.
+      flowtitle2: Contact with the requester
+      flowsubtitle2: Confirm the request and send a message
+      flowhead21: Exchange messages
+      flowcontent21: Briefly introduce yourself and offer them your porting service
+      flowhead22: Make sure the condition
+      flowcontent22: Let's check items and confirm fee. We will discuss in advance whether to include the reward into the purchase price or add it to the purchase price.
+      flowhead23: Confirm rendezvous
+      flowcontent23: Consult the place and time to meet with the requester. If you are going to the town for the first time, let him know so and make it a plain place.
+      flowtitle3: Meet the requester
+      flowsubtitle3: Meet the requester where you have fixed and deliver the items
+      flowhead31: Delivery of items
+      flowcontent31: Let them check what you brought
+      flowhead32: Get a reward
+      flowcontent32: Since we do not currently support payment in our service, you will receive the amount determined in advance by cash or P2P payment service.
+      flowhead33: Experience type reward
+      flowcontent33: If proposed experience-based compensation such as free lunch or short city sightseeing, let's enjoy the local experience by all means.
   top:
     _nonsigned:
-      toptitle: Ask International Errand
-      subtitle: You won't find easily the items of your contry if you live in abroad. You must pay more or wait to get your things. Ask someone to do an errand for you!
+      toptitle: A way to get cheeper even you live in abroad
+      subtitle: Your domestic products you like are so expensive if you are overseas. Even if you ask someone to send it by air mail, the shipping cost is high and it takes time. Is it really unavoidable because you live in abroad? Then, why do not you ask someone coming soon from your country to your city?
       signupbutton: Let's get started
       reasontitle: 3 Reasons to join
       reasonhead1: Low-cost
@@ -83,29 +98,29 @@ en:
       reasoncontent2: You are waiting for the arrival of your international shipment? You can skip the waiting time if someone is visiting your town shortly.
       reasonhead3: No need for tracking
       reasoncontent3: International shipping is risky. Sometimes your package losts due to poor delivery service, or sometime shipped backed to for no reason. Stop checking the track record on the web. A porter will be in charge safe delivery.
-      flow:
-      flowtitle1:
-      flowsubtitle1:
-      flowhead11:
-      flowcontent11:
-      flowhead12:
-      flowcontent12:
-      flowtitle2:
-      flowsubtitle2:
-      flowhead21:
-      flowcontent21:
-      flowhead22:
-      flowcontent22:
-      flowhead23:
-      flowcontent23:
-      flowtitle3:
-      flowsubtitle3:
-      flowhead31:
-      flowcontent31:
-      flowhead32:
-      flowcontent32:
-      flowhead33:
-      flowcontent33:
+      flow: Flow of request
+      flowtitle1: Make a request
+      flowsubtitle1: First make a detailed request of purchase list
+      flowhead11: What information required?
+      flowcontent11: Porter lives in the country where your wishing item is sold and is a person who will visit your town soon. Let's describe the specific product name and the place to obtain as much as possible so that Porter can understand exactly what you want.
+      flowhead12: Propose a reasonable reward
+      flowcontent12: Porter came all the way to find what you want. If your suggested fee is less than Porter's expectation, people may not be found easily. Let's propose reasonable compensation as much as possible.
+      flowtitle2: Contact from a potential porter
+      flowsubtitle2: Confirmation of content and message will be sent from the porter.
+      flowhead21: Exchange messages
+      flowcontent21: The porter will answer your request. Know porter while exchanging messages, answer the other's question.
+      flowhead22: Confirm the request
+      flowcontent22: Let's check purchased items and confirm fee. We will discuss in advance whether to include the purchase price or add it to the purchase price.
+      flowhead23: Fix rendezvous
+      flowcontent23: Fix the place and time to meet with the porter. Let's specify an easy-to-understand place so that it will not take time to hand over.
+      flowtitle3: Meet with porter
+      flowsubtitle3: Get things from the porter at the place you decided in advance.
+      flowhead31: Get items
+      flowcontent31: Confirm what the porter delivered on the place
+      flowhead32: Give rewards
+      flowcontent32: Since we do not currently support payment in our service, you will receive the amount determined in advance by cash or P2P payment service.
+      flowhead33: Experience type rewards
+      flowcontent33: Porters who visit your town for the first time with a small amount of transportation are also attractive with experienced rewards such as free lunch or short city sightseeing.
       contacttitle: Contact us!
       contactcontent: We continuously improve our sevice. Send us an email for your feedback to help us!
       legaltitle: Legal notice
@@ -121,18 +136,7 @@ en:
       tipscontent2: You should propose an attractive reward for their work. The service is not a free! If it's just a small amount of purchase, non-monetary reward would be a good choice like a free lunch!
       tipshead3: Fix a good meeting point
       tipscontent3: The porter might visit your town for the first time. Be sure that you will not miss in a crowd!
-      porterlinktitle: Leaving for a trip?
-      porterlinkcontent: Become a porter. Do a small errand, and have a reward. You might have a local experience that you won't imagine.
-      porterlinkbutton: Become a porter
-      howtotitle: How to start?
-      howtohead1: Post an announce
-      howtocontent1: Post an announce for errand. A porter will contact you.
-      howtohead2: Contact with porter
-      howtocontent2: Confirm what you give in return. Make sure when & where to meet.
-      howtohead3: Wait the visit
-      howtocontent3: Porter will purchase the items and bring them to your city on their flight.
-      howtohead4: Get your items
-      howtocontent4: Give them a reward for the errand, and get your items!
+      requestlinktitle: You can ask here an errand
       legaltitle: Legal notice
       legalcontent: It is not allowed to trade products forbidden under international law, such as money, rare animals, narcotics. Users of the services need to transport according to the import laws of each country. This site is not responsible for any problems caused by using the service. Also we are not responsible for financial troubles arising between users of the service.
   users:

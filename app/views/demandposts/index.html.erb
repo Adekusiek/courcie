@@ -2,41 +2,46 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <hr class="blackborder">
-        <% @demandposts.each do |demandpost| %>
-        <a href="<%= url_for(demandpost) %>" class="post">
-          <div class="row">
-            <div class="col-md-4">
-              <%= image_tag demandpost.user.avatar.url(:medium), class: "avatarmedium center-block"%>
-              <div class="text-center">
-                <div class="profile-font-name"><%= demandpost.user.name %></div>
-                <div class="profile-font-town"><%= demandpost.city_to %></div>
-              </div>
-            </div>
-            <div class="col-md-8">
-              <div>
-                <div class="post-font-subtitle"><%= t('.country_from') %></div>
-                <div class="post-font-detail"><%= ISO3166::Country.new(demandpost.country_from).name %></div>
-                <div class="post-font-subtitle"><%= t('.item_description') %></div>
-                <div class="post-font-detail"><%= demandpost.item_description %></div>
-                <div class="post-font-subtitle"><%= t('.reward_type_header') %></div>
-                <div class="post-font-detail">
-                  <% if demandpost.money_ok == true && demandpost.no_money_ok == true %>
-                    <%= t('.reward_type1') %>
-                  <% elsif demandpost.money_ok == true %>
-                    <%= t('.reward_type2') %>
-                  <% elsif demandpost.no_money_ok == true %>
-                    <%= t('.reward_type3') %>
-                  <% end %>
-                </div>
-                <div class="post-font-subtitle"><%= t('.reward_description') %></div>
-                <div class="post-font-detail"><%= demandpost.reward_description %></div>
-              </div>
-            </div>
-          </div>
+        <% unless @demandposts.any? %>
+          <h2>現在、条件に合うアナウンスはありません</h2>
+          <h4>条件に合うリクエストが投稿されたら通知されるよう、旅行日程を登録しましょう</h4>
+          
+        <% else %>
           <hr class="blackborder">
-
-          <% end %>
+          <% @demandposts.each do |demandpost| %>
+          <a href="<%= url_for(demandpost) %>" class="post">
+            <div class="row">
+              <div class="col-md-4">
+                <%= image_tag demandpost.user.avatar.url(:medium), class: "avatarmedium center-block"%>
+                <div class="text-center">
+                  <div class="profile-font-name"><%= demandpost.user.name %></div>
+                  <div class="profile-font-town"><%= demandpost.city_to %></div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div>
+                  <div class="post-font-subtitle"><%= t('.country_from') %></div>
+                  <div class="post-font-detail"><%= ISO3166::Country.new(demandpost.country_from).name %></div>
+                  <div class="post-font-subtitle"><%= t('.item_description') %></div>
+                  <div class="post-font-detail"><%= demandpost.item_description %></div>
+                  <div class="post-font-subtitle"><%= t('.reward_type_header') %></div>
+                  <div class="post-font-detail">
+                    <% if demandpost.money_ok == true && demandpost.no_money_ok == true %>
+                    <%= t('.reward_type1') %>
+                    <% elsif demandpost.money_ok == true %>
+                    <%= t('.reward_type2') %>
+                    <% elsif demandpost.no_money_ok == true %>
+                    <%= t('.reward_type3') %>
+                    <% end %>
+                  </div>
+                  <div class="post-font-subtitle"><%= t('.reward_description') %></div>
+                  <div class="post-font-detail"><%= demandpost.reward_description %></div>
+                </div>
+              </div>
+            </div>
+            <hr class="blackborder">
+            <% end %>
+          <% end%>
         </div>
       </div>
     </div>

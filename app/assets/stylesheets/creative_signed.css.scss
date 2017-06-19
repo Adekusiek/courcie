@@ -92,27 +92,24 @@ p.fine {
   background-color: #EEEEEE
 }
 
-.section-link-porter{
+.section-link-request{
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 400px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: image-url('Airplane.jpg');
+  background-image: image-url('BusImage.jpg');
   text-align: center;
   color: white;
 }
 
-.section-link-porter .section-link-porter-content{
-  padding-top: 200px;
+.section-link-request .section-link-request-content{
+    padding-top: 100px;
 }
 
-.section-howto {
-  padding: 50px 15px 50px;
-}
 
 .porter-top-unsigned {
   position: relative;

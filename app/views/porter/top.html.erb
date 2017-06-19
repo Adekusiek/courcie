@@ -6,12 +6,17 @@
         <div class="col-md-8 col-md-offset-2">
           <h1><%= t '.toptitle'%></h1>
           <p class="fine"><%= t '.subtitle'%></p>
-          <div class="form-inline">
+            <%= search_form_for @search, url: demandposts_path, method: :get do |f| %>
+            <div class="form-inline">
+              <div class="form-group">
+                <%= f.country_select :country_from_eq, {priority: %w(US CA), prompt: t('.fromcountrytab')}, class: "form-control" %>
+                <%= f.text_field :city_to_cont, id: "city_to", class: "form-control", placeholder: t('.tocitytab') %>
+              </div>
+            </div>
+            <br>
             <div class="form-group">
-              <%= search_form_for @search, url: demandposts_path, method: :get do |f| %>
-              <%= f.country_select :country_from_eq, {priority: %w(US CA), prompt: t('.fromcountrytab')}, class: "form-control" %>
-              <%= f.text_field :city_to_cont, id: "city_to", class: "form-control", placeholder: t('.tocitytab') %>
               <%= f.submit t('.searchbutton'), class: "btn btn-primary" %>
+            </div>
               <% end %>
             </div>
           </div>
@@ -148,9 +153,11 @@
   </div>
 </div>
 
-<a class="btn btn-primary btn-xl sr-button center-block btn-signin-half" role="button" data-toggle="modal" data-target="#signup-modal" data-backdrop="static" data-controls-modal="signup-modal">
-  <b><%= t '.signupbutton'%></b>
-</a>
+<% unless user_signed_in? %>
+  <a class="btn btn-primary btn-xl sr-button center-block btn-signin-half" role="button" data-toggle="modal" data-target="#signup-modal" data-backdrop="static" data-controls-modal="signup-modal">
+    <b><%= t '.signupbutton'%></b>
+  </a>
+<% end %>
 
 <hr class="sectionborder bg-ghostwhite">
 
