@@ -16,6 +16,7 @@ en:
       expire_date: Request expires (optional)
       item_description: Items to bring
       item_description_placeholder: Ex. A camera kit and 3 books. My favorite chocolates
+      reward_type: Reward type
       money_ok: Money
       no_money_ok: Not Money
       reward_description: Possible reward description

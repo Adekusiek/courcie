@@ -8,7 +8,7 @@ ja:
       profilelink: ユーザーページ
   demandposts:
     _form:
-      title: お使いを頼む
+      title: お使いをリクエスト
       editprofile: 基本情報の設定
       city_to: あなたの町
       country_from: どの国で買うか
@@ -16,6 +16,7 @@ ja:
       expire_date: アナウンスの有効期限（任意）
       item_description: お使いのリスト
       item_description_placeholder: 例：カメラ、３冊の専門書、米３kg
+      reward_type: 報酬の種類
       money_ok: 金銭的報酬
       no_money_ok: 非金銭的報酬
       reward_description: お使いの報酬
@@ -126,7 +127,7 @@ ja:
       legaltitle: 注意事項
       legalcontent: お金、動物、麻薬など、国際法の下で禁止されている製品の取引は許可されていません。ユーザーは、各国の輸入法に従って輸送する必要があります。このサイトは、サービスの使用に起因する問題については責任を負いません。サービスの利用者の間で生じる問題には責任を負いません。
     _signed:
-      toptitle: お使いを頼む
+      toptitle: お使いをリクエスト
       subtitle: あなたが買ってきて欲しいもののリストを投稿しましょう。まもなくあなたの都市を訪れる人から連絡があります。さあ、始めましょう。
       titlebutton: リクエストを投稿する
       tipstitle: 良い投稿のヒント
