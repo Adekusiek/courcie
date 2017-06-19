@@ -75,10 +75,7 @@ en:
     _nonsigned:
       toptitle: Ask International Errand
       subtitle: You won't find easily the items of your contry if you live in abroad. You must pay more or wait to get your things. Ask someone to do an errand for you!
-      titlebutton: Find Out More
-      abouttitle: Be a porter in COURCIE
-      aboutcontent: Shortly leaving for abroad? Let's find someone asking an errand there. You will find an announce matching to your next destination. Bring items and get your reward!
-      aboutbutton: Become a porter? Join us!
+      signupbutton: Let's get started
       reasontitle: 3 Reasons to join
       reasonhead1: Low-cost
       reasoncontent1: If you are living outside of your country and still paying a double or tripple price for the domestic products, you can ask for a service of delivery. You can get your things well cheaper than the shipping cost.
@@ -86,8 +83,29 @@ en:
       reasoncontent2: You are waiting for the arrival of your international shipment? You can skip the waiting time if someone is visiting your town shortly.
       reasonhead3: No need for tracking
       reasoncontent3: International shipping is risky. Sometimes your package losts due to poor delivery service, or sometime shipped backed to for no reason. Stop checking the track record on the web. A porter will be in charge safe delivery.
-      errandtitle: What you can ask the errand for?
-      errandcontent: Professional items, books in your mother langage, cameras... Cheese, spices, .... you like paying double or trriple price? Someone visiting your town shortly will buy and bring them!
+      flow:
+      flowtitle1:
+      flowsubtitle1:
+      flowhead11:
+      flowcontent11:
+      flowhead12:
+      flowcontent12:
+      flowtitle2:
+      flowsubtitle2:
+      flowhead21:
+      flowcontent21:
+      flowhead22:
+      flowcontent22:
+      flowhead23:
+      flowcontent23:
+      flowtitle3:
+      flowsubtitle3:
+      flowhead31:
+      flowcontent31:
+      flowhead32:
+      flowcontent32:
+      flowhead33:
+      flowcontent33:
       contacttitle: Contact us!
       contactcontent: We continuously improve our sevice. Send us an email for your feedback to help us!
       legaltitle: Legal notice

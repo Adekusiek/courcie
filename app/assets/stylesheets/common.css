@@ -10,6 +10,10 @@
   width: 50%
 }
 
+.btn-signin-half{
+  width: 30%
+}
+
 .btn-navbar {
   padding: 10px 10px 10px
 }
@@ -24,6 +28,16 @@ hr.blackborder {
   border-color: #a9a9a9;
   border-width: 1px;
   max-width: 2000px !important;
+}
+
+.land-list-section {
+    padding: 40px 0 40px;
+}
+
+hr.sectionborder {
+  border-color: #a9a9a9;
+  border-width: 1px;
+  max-width: 80% !important;
 }
 
 hr.transparent {

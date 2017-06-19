@@ -113,3 +113,127 @@ p.fine {
 .section-howto {
   padding: 50px 15px 50px;
 }
+
+.porter-top-unsigned {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-image: image-url('women-on-bridge.jpeg');
+  text-align: center;
+  color: white;
+}
+.porter-top-unsigned .header-content {
+  position: relative;
+  text-align: center;
+  padding: 80px 15px 50px;
+  width: 100%;
+}
+.porter-top-unsigned .header-content .header-content-inner h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 30px;
+}
+.porter-top-unsigned .header-content .header-content-inner hr {
+  margin: 30px auto;
+}
+.porter-top-unsigned .header-content .header-content-inner p {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .porter-top-unsigned {
+    min-height: 80%;
+  }
+  .porter-top-unsigned .header-content {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 0 50px;
+  }
+  .porter-top-unsigned .header-content .header-content-inner {
+    max-width: 1000px;
+  }
+  .porter-top-unsigned .header-content .header-content-inner h1 {
+    font-size: 50px;
+  }
+  .porter-top-unsigned .header-content .header-content-inner p {
+    font-size: 18px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.porter-top-signed {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-image: image-url('Forestwomen.jpeg');
+  text-align: center;
+  color: white;
+}
+.porter-top-signed .header-content {
+  position: relative;
+  text-align: center;
+  padding: 80px 15px 50px;
+  width: 100%;
+}
+.porter-top-signed .header-content .header-content-inner h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 30px;
+}
+.porter-top-signed .header-content .header-content-inner hr {
+  margin: 30px auto;
+}
+.porter-top-signed .header-content .header-content-inner p {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .porter-top-signed {
+    min-height: 80%;
+  }
+  .porter-top-signed .header-content {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 0 50px;
+  }
+  .porter-top-signed .header-content .header-content-inner {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .porter-top-signed .header-content .header-content-inner h1 {
+    font-size: 50px;
+  }
+  .porter-top-signed .header-content .header-content-inner p {
+    font-size: 18px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

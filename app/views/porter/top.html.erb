@@ -1,9 +1,10 @@
-<header>
+<% if user_signed_in? %>
+<div class="porter-top-signed">
   <div class="header-content">
     <div class="header-content-inner">
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
-          <h1 id="homeHeading"><%= t '.toptitle'%></h1>
+          <h1><%= t '.toptitle'%></h1>
           <p class="fine"><%= t '.subtitle'%></p>
           <div class="form-inline">
             <div class="form-group">
@@ -14,52 +15,201 @@
               <% end %>
             </div>
           </div>
-
         </div>
       </div>
     </div>
   </div>
-</header>
-
-<div class="section-howto">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading"><%= t '.howtotitle'%></h2>
-        <hr class="primary">
+</div>
+<% else %>
+<div class="porter-top-unsigned">
+  <div class="header-content">
+    <div class="header-content-inner">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1><%= t '.toptitle'%></h1>
+          <hr>
+          <p><%= t '.subtitle'%></p>
+          <a class="page-scroll btn btn-primary btn-xl sr-button" role="button" data-toggle="modal" data-target="#signup-modal" data-backdrop="static" data-controls-modal="signup-modal">
+            <b><%= t '.signupbutton'%></b>
+          </a>
+        </div>
       </div>
     </div>
   </div>
+</div>
+<% end %>
+
+
+<div class="land-list-section">
+  <div class="text-center">
+    <h3><%= t '.flow'%></h3>
+  </div>
   <div class="container">
     <div class="row">
-      <div class="col-lg-3 col-md-6 text-center">
-        <div class="service-box">
-          <i class="fa fa-4x fa-search text-primary sr-icons"></i>
-          <h3><%= t '.howtohead1'%></h3>
-          <p class="text-muted"><%= t '.howtocontent1'%></p>
+      <div class="col-lg-offset-1 col-lg-10 col-lg-1-offset">
+        <h3>①</h3>
+        <h2><%= t '.flowtitle1'%></h2>
+        <h5><%= t '.flowsubtitle1'%></h5>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="service-box">
+              <i class="fa fa-2x fa-search text-primary sr-icons"></i>
+              <h3><%= t '.flowhead11'%></h3>
+              <p class="fine"><%= t '.flowcontent11'%></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service-box">
+              <i class="fa fa-2x fa-list-alt text-primary sr-icons"></i>
+              <h3><%= t '.flowhead12'%></h3>
+              <p class="fine"><%= t '.flowcontent12'%></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service-box">
+              <i class="fa fa-2x fa-gift text-primary sr-icons"></i>
+              <h3><%= t '.flowhead13'%></h3>
+              <p class="fine"><%= t '.flowcontent13'%></p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 text-center">
-        <div class="service-box">
-          <i class="fa fa-4x fa-suitcase text-primary sr-icons"></i>
-          <h3><%= t '.howtohead2'%></h3>
-          <p class="text-muted"><%= t '.howtocontent2'%></p>
+    </div>
+  </div>
+</div>
+<div class="land-list-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-offset-1 col-lg-10 col-lg-1-offset">
+        <h3>②</h3>
+        <h2><%= t '.flowtitle2'%></h2>
+        <h5><%= t '.flowsubtitle2'%></h5>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="service-box">
+              <i class="fa fa-2x fa-commenting-o text-primary sr-icons"></i>
+              <h3><%= t '.flowhead21'%></h3>
+              <p class="fine"><%= t '.flowcontent21'%></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service-box">
+              <i class="fa fa-2x fa-suitcase text-primary sr-icons"></i>
+              <h3><%= t '.flowhead22'%></h3>
+              <p class="fine"><%= t '.flowcontent22'%></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service-box">
+              <i class="fa fa-2x fa-location-arrow text-primary sr-icons"></i>
+              <h3><%= t '.flowhead23'%></h3>
+              <p class="fine"><%= t '.flowcontent23'%></p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 text-center">
-        <div class="service-box">
-          <i class="fa fa-4x fa-plane text-primary sr-icons"></i>
-          <h3><%= t '.howtohead3'%></h3>
-          <p class="text-muted"><%= t '.howtocontent3'%></p>
+    </div>
+  </div>
+</div>
+
+<div class="land-list-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-offset-1 col-lg-10 col-lg-1-offset">
+        <h3>③</h3>
+        <h2><%= t '.flowtitle3'%></h2>
+        <h5><%= t '.flowsubtitle3'%></h5>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="service-box">
+              <i class="fa fa-2x fa-handshake-o text-primary sr-icons"></i>
+              <h3><%= t '.flowhead31'%></h3>
+              <p class="fine"><%= t '.flowcontent31'%></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service-box">
+              <i class="fa fa-2x fa-money text-primary sr-icons"></i>
+              <h3><%= t '.flowhead32'%></h3>
+              <p class="fine"><%= t '.flowcontent32'%></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service-box">
+              <i class="fa fa-2x fa-cutlery text-primary sr-icons"></i>
+              <h3><%= t '.flowhead33'%></h3>
+              <p class="fine"><%= t '.flowcontent33'%></p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 text-center">
-        <div class="service-box">
-          <i class="fa fa-4x fa-handshake-o text-primary sr-icons"></i>
-          <h3><%= t '.howtohead4'%></h3>
-          <p class="text-muted"><%= t '.howtocontent4'%></p>
+    </div>
+  </div>
+</div>
+
+<a class="btn btn-primary btn-xl sr-button center-block btn-signin-half" role="button" data-toggle="modal" data-target="#signup-modal" data-backdrop="static" data-controls-modal="signup-modal">
+  <b><%= t '.signupbutton'%></b>
+</a>
+
+<hr class="sectionborder bg-ghostwhite">
+
+<div class="bg-lavender">
+  <div class="container text-center">
+    <div class="call-to-action">
+      <h3><%= t 'top._nonsigned.legaltitle'%></h3>
+      <p><%= t 'top._nonsigned.legalcontent'%></p>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade index" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog animated">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h4>Sign up</h4>
+          <div class="text-center">
+          <div class="social-buttons-signup">
+            <a href="<%= omniauth_authorize_path(resource_name, "facebook") %>" class="btn btn-fb">
+              <i class="fa fa-facebook"></i>
+              Facebook</a>
+          </div>
+          <br>
+          -------- or -------
+          <br>
+        </div>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+            <div class="form-group">
+              <div class="field">
+                <%= f.label :email, "Email address" %><br/>
+                <%= f.email_field :email, class: "form-control", autofocus: true, placeholder: "Email address" %>
+              </div>
+            </div>
+            <div class="form-group">
+
+              <%= f.label :password, "password"%><br/>
+              <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password (more than 5 characters)" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :password_confirmation %><br/>
+              <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.submit "Sign up", class: "btn btn-primary btn-block" %>
+            </div>
+
+          <% end %>
+
         </div>
       </div>
+
     </div>
   </div>
 </div>
