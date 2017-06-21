@@ -1,7 +1,7 @@
 ja:
   date:
     formats:
-      default: "%Y/%m/%d"  
+      default: "%Y/%m/%d"
   layouts:
     application:
       porterlink: ポーターになる
@@ -92,7 +92,8 @@ ja:
       flowcontent33: フリーランチや短い市内観光など、体験型の報酬を提案されていた場合は、ぜひローカルな体験を楽しみましょう。
   top:
     _nonsigned:
-      toptitle: 海外でも好きなものを安く買いたい人に
+      toptitle: 海外でも好きなものを安く
+      toptitle1: もうローカルプライスに悩まない
       subtitle: あなた好きな自国の製品は、どうして海外だとこんなにも高いのでしょう。誰かに航空便で送ってもらうにしても、輸送費は高いし時間がかかります。海外だから、本当に仕方ないのでしょうか？それなら、あなたの国からあなたの町に近々来る人に、お使いを頼みませんか。
       signupbutton: さあ、はじめよう
       reasontitle: COURCIEを使う3つの理由

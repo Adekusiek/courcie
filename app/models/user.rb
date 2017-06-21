@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :confirmable
 
-  has_many :demandposts
+  has_many :demandposts, dependent: :destroy
 
   has_many :send_messages, class_name: 'Message', foreign_key: 'user_from_id'
   has_many :recieve_messages, class_name: 'Message', foreign_key: 'user_to_id'
@@ -13,8 +13,18 @@ class User < ApplicationRecord
   has_many :usercontacts
   has_many :iteneraries
 
+  attr_reader :avatar_remote_url
   has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>"}, default_url: "profile-default.jpg"
   validates_attachment_content_type :avatar, content_type: ["image/jpg","image/jpeg","image/png"]
+
+
+  def avatar_remote_url=(url_value)
+    self.avatar = URI.parse(url_value)
+    # Assuming url_value is http://example.com/photos/face.png
+    # avatar_file_name == "face.png"
+    # avatar_content_type == "image/png"
+    @avatar_remote_url = url_value
+  end
 
   def self.find_for_oauth(auth)
     user = User.where(uid: auth.uid, provider: auth.provider).first
@@ -23,10 +33,12 @@ class User < ApplicationRecord
       user = User.create(
         uid:      auth.uid,
         provider: auth.provider,
-        email:    User.dummy_email(auth),
+        email:    auth.info.email,
         password: Devise.friendly_token[0, 20],
         confirmed_at: Time.now.utc,
-        confirmation_token: nil
+        confirmation_token: nil,
+        name:     auth.info.name,
+        avatar: auth.info.image
       )
     end
 

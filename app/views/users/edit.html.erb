@@ -17,7 +17,7 @@
           <div class="col-lg-9">
             <%= f.text_field :home_town, placeholder: t('.livingtown_placeholder'), id: :city_from, class: "form-control" %>
           </div>
-          <div class= "col-lg-offset-3 col-lg-9 profile-show">
+          <div class="col-lg-offset-3 col-lg-9 profile-show">
             <%= current_user.home_town %>
           </div>
         </div>
@@ -26,7 +26,7 @@
           <div class="col-lg-9">
             <%= f.text_field :name, placeholder: t('.name_placeholder'), class: "form-control" %>
           </div>
-          <div class= "col-lg-offset-3 col-lg-9 profile-show">
+          <div class="col-lg-offset-3 col-lg-9 profile-show">
             <%= current_user.name %>
           </div>
         </div>
@@ -50,17 +50,17 @@
   <br>
 
   <%= form_for @itinerary, class: "form-horizontal" do |f| %>
-    <% if @itinerary.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@itinerary.errors.count, "error") %>
-        prohibited this itinerary from being saved:</h2>
-      <ul>
-        <% @itinerary.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-    <% end %>
+  <% if @itinerary.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@itinerary.errors.count, "error") %>
+      prohibited this itinerary from being saved:</h2>
+    <ul>
+      <% @itinerary.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
 
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
@@ -68,12 +68,27 @@
         <div class="form-group">
           <%= f.country_select :country_from, {priority: %w(US CA), prompt: t('.fromcountrytab')}, class: "form-control" %>
           <%= f.text_field :city_to, id: "city_to", class: "form-control", placeholder: t('.tocitytab') %>
-          <%= f.date_field :departure_date,  class: "form-control datepicker" %>
+          <div class="input-group date" id='datetimepicker1'>
+            <%= f.text_field :departure_date,  class: "form-control", placeholder: "Departure date" %>
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+          </div>
         </div>
+        <br>
       </div>
-      <br>
     </div>
   </div>
+
+  <script type="text/javascript">
+    $(function () {
+      $('#datetimepicker1').datetimepicker({
+        format: 'YYYY-MM-DD'
+      });
+    });
+  </script>
+
+  <br>
   <div class="row">
     <div class="col-lg-4 col-lg-offset-4">
       <div class="form-group">
@@ -83,6 +98,5 @@
   </div>
 
   <% end %>
-
 
 </div>

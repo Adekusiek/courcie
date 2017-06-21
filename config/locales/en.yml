@@ -60,7 +60,7 @@ en:
   porter:
     top:
       toptitle: A journey with a service
-      subtitle: If you plan to travel abroad soon, if there is space in the suitcase, you can put items for someone and make good with that space. Let's use COURCIE to find the posts of those who need help outside of your country. And let's get the reward.
+      subtitle: If you plan to travel abroad soon, if there is space in the suitcase, you can put items for someone and make good with that space. Let's use COURCIE to find the posts of those who need help outside of your country, and get what you deserve.
       fromcountrytab: Country of residence
       signupbutton : Be a Porter in COURCIE
       tocitytab: City traveling to
@@ -92,7 +92,8 @@ en:
       flowcontent33: If proposed experience-based compensation such as free lunch or short city sightseeing, let's enjoy the local experience by all means.
   top:
     _nonsigned:
-      toptitle: A way to get cheeper even you live in abroad
+      toptitle: Get cheeper
+      toptitle1: No more ex-local price around you
       subtitle: Your domestic products you like are so expensive if you are overseas. Even if you ask someone to send it by air mail, the shipping cost is high and it takes time. Is it really unavoidable because you live in abroad? Then, why do not you ask someone coming soon from your country to your city?
       signupbutton: Let's get started
       reasontitle: 3 Reasons to join
@@ -133,14 +134,14 @@ en:
       toptitle: Find your porter
       subtitle: Just post your purchase list. You'll be contacted from a porter who visit your city soon. Let's get started.
       titlebutton: Make a request
-      tipstitle: Tips for a good anounce
+      tipstitle: Tips for a good request
       tipshead1: Describe what you want
       tipscontent1: The announce should be descriptive to make understand your porter what exactly you wants. It may be good if you can post a webpage link to that product.
       tipshead2: Propose a good reward
       tipscontent2: You should propose an attractive reward for their work. The service is not a free! If it's just a small amount of purchase, non-monetary reward would be a good choice like a free lunch!
       tipshead3: Fix a good meeting point
       tipscontent3: The porter might visit your town for the first time. Be sure that you will not miss in a crowd!
-      requestlinktitle: You can ask here an errand
+      requestlinktitle: You can ask here a service
       legaltitle: Legal notice
       legalcontent: It is not allowed to trade products forbidden under international law, such as money, rare animals, narcotics. Users of the services need to transport according to the import laws of each country. This site is not responsible for any problems caused by using the service. Also we are not responsible for financial troubles arising between users of the service.
   users:

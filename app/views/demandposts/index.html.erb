@@ -5,7 +5,7 @@
         <% unless @demandposts.any? %>
           <h2>現在、条件に合うアナウンスはありません</h2>
           <h4>条件に合うリクエストが投稿されたら通知されるよう、旅行日程を登録しましょう</h4>
-          
+          <%= link_to "Register Itinerary", edit_user_path(current_user), class:"btn btn-primary" %>
         <% else %>
           <hr class="blackborder">
           <% @demandposts.each do |demandpost| %>
