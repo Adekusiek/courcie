@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :recieve_messages, class_name: 'Message', foreign_key: 'user_to_id'
 
   has_many :usercontacts
-  has_many :iteneraries
+  has_many :itineraries
 
   attr_reader :avatar_remote_url
   has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>"}, default_url: "profile-default.jpg"
