@@ -37,6 +37,7 @@ gem 'jbuilder', '2.6.4'
 
 # gems under this line is added for Coursier PJ
 gem 'devise'
+gem 'devise-bootstrap-views'
 
 gem 'omniauth'
 gem 'omniauth-facebook'

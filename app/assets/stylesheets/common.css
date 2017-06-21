@@ -19,8 +19,12 @@
 }
 
 .body-padding {
-	padding-top: 60px;
+	padding-top: 20px;
   min-height: 100%;
+}
+
+.top-space {
+    min-height: 50px;
 }
 
 

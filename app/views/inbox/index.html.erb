@@ -17,7 +17,7 @@
               <div class="text-center">
                 <div class="profile-font-name-small"><%= user.name %></div>
                 <div class="profile-font-town-small"><%= user.home_town %></div>
-                <div class="profile-font-town-small"><%= lastmessage.created_at %></div>
+                <div class="profile-font-town-small"><%= I18n.l Date.parse(lastmessage.created_at.to_s) %></div>
               </div>
             </div>
             <div class="col-md-7">

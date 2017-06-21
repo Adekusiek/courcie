@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
 root 'top#index'
 
 scope "/:locale", locale: /en|ja/   do
@@ -32,5 +33,7 @@ scope "/:locale", locale: /en|ja/   do
   #   delete "/users/edit",     :to => "devise/registrations#destroy",  :as => nil
   #   post "/users/edit",       :to => "devise/registrations#create",  :as => nil
   # end
+  post 'itinerary/create' => 'itinerary#create', as: "itineraries"
+
 
 end

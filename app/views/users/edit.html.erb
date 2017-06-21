@@ -2,9 +2,10 @@
   <div class="row form">
     <div class="col-lg-8 col-lg-offset-2">
       <%= form_for current_user do |f| %>
-      <h2><%= t('.editprofile') %></h2>
+      <h2 class="text-center"><%= t('.editprofile') %></h2>
+      <br>
       <div class="col-lg-4">
-        <%= image_tag current_user.avatar.url(:medium), class: "avatarlarge center-block" %>
+        <%= image_tag current_user.avatar.url(:medium), class: "avatarmedium center-block" %>
 
         <div class="form-group file">
           <%= f.file_field :avatar, class: "form-control floating-label", placeholder: "画像アップロード" %>
@@ -33,7 +34,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
+    <div class="col-lg-4 col-lg-offset-4">
 
       <div class="form-group">
         <%= f.submit t('.submitbutton'), class: "btn btn-primary withripple btn-post center-block" %>
@@ -41,4 +42,47 @@
       <% end %>
     </div>
   </div>
+
+  <hr class="sectionborder">
+
+  <h2 class="text-center">Register your Itinerary</h2>
+  <p class="fine text-center">You will receive a mail if a new request matching to your itinerary is posted</p>
+  <br>
+
+  <%= form_for @itinerary, class: "form-horizontal" do |f| %>
+    <% if @itinerary.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@itinerary.errors.count, "error") %>
+        prohibited this itinerary from being saved:</h2>
+      <ul>
+        <% @itinerary.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="form-inline">
+        <div class="form-group">
+          <%= f.country_select :country_from, {priority: %w(US CA), prompt: t('.fromcountrytab')}, class: "form-control" %>
+          <%= f.text_field :city_to, id: "city_to", class: "form-control", placeholder: t('.tocitytab') %>
+          <%= f.date_field :departure_date,  class: "form-control datepicker" %>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 col-lg-offset-4">
+      <div class="form-group">
+        <%= f.submit t('.registerbutton'), class: "btn btn-primary btn-post center-block" %>
+      </div>
+    </div>
+  </div>
+
+  <% end %>
+
+
 </div>

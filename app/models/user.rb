@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :omniauthable
+         :omniauthable, :confirmable
 
   has_many :demandposts
 
@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many :recieve_messages, class_name: 'Message', foreign_key: 'user_to_id'
 
   has_many :usercontacts
+  has_many :iteneraries
 
   has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>"}, default_url: "profile-default.jpg"
   validates_attachment_content_type :avatar, content_type: ["image/jpg","image/jpeg","image/png"]
@@ -23,7 +24,9 @@ class User < ApplicationRecord
         uid:      auth.uid,
         provider: auth.provider,
         email:    User.dummy_email(auth),
-        password: Devise.friendly_token[0, 20]
+        password: Devise.friendly_token[0, 20],
+        confirmed_at: Time.now.utc,
+        confirmation_token: nil
       )
     end
 

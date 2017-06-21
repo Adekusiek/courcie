@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @itinerary = Itinerary.new
   end
 
   def update

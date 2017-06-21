@@ -1,4 +1,7 @@
 en:
+  date:
+    formats:
+      default: "%d/%m/%Y"
   layouts:
     application:
       porterlink: Become a Porter
@@ -148,3 +151,6 @@ en:
       name: Name
       name_placeholder: Your name here
       submitbutton:  submit
+      fromcountrytab: Country of departure
+      tocitytab: City traveling to
+      registerbutton: Set your itinerary
