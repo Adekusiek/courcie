@@ -10,7 +10,7 @@ class DemandpostsController < ApplicationController
     # just for city query
     # the search logic must be reevaluated
     @search = Demandpost.search(params[:q])
-    @demandposts = @search.result
+    @demandposts = @search.result.order(created_at: :desc)
 
     respond_to do |format|
       format.html # index.html.erb

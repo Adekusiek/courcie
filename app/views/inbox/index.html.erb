@@ -20,8 +20,8 @@
                 <div class="profile-font-town-small"><%= I18n.l Date.parse(lastmessage.created_at.to_s) %></div>
               </div>
             </div>
-            <div class="col-md-7">
-              <div class="profile-font-town"><%= lastmessage.content%></div>
+            <div class="col-md-7 message-extract-layout">
+              <div class="message-extract-font"><p><%= lastmessage.content%></p></div>
             </div>
           </div>
         <% end %>

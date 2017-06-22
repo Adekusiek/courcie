@@ -1,0 +1,37 @@
+
+.profile-font-name {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top:  10px;
+  margin-bottom: 3px;
+}
+
+.profile-font-name-small {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-top:  6px;
+  margin-bottom: 3px;
+}
+
+.profile-font-town-small {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 3px;
+  color: #808080
+}
+
+
+.post-font-subtitle {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top:  10px;
+  margin-bottom: 3px;
+  color: #ff8c00
+}
+
+.post-font-detail {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top:  10px;
+  margin-bottom: 3px;
+}

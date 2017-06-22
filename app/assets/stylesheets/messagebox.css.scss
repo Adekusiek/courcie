@@ -1,0 +1,41 @@
+.message-extract-font {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 3px;
+  color: #808080
+}
+
+.message-extract-layout {
+  padding-top: 14px;
+  overflow: hidden;
+
+  p{
+    font-size: 14px;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+}
+
+.message-box-from {
+  border-style: groove;
+  border-color: #a9a9a9;
+  border-width: 1px;
+  border-radius: 5px;
+  background-color: #d3d3d3;
+  min-height: 80px
+}
+
+.message-box-to {
+  border-style: groove;
+  border-color: #a9a9a9;
+  border-width: 1px;
+  border-radius: 5px;
+  min-height: 80px
+}
+
+.message-content {
+  padding: 15px;
+  vertical-align: middle
+}

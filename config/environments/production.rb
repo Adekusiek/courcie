@@ -67,10 +67,10 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     port:                 587,
-    address:              'smtp9.gmoserver.jp',
-    domain:               'smtp9.gmoserver.jp',
-    user_name:            'no-reply@courcie.com',
-    password:             'E#T7c0Sc',
+    address:              ENV['MAILER_ADDRESS'],
+    domain:               ENV['MAILER_DOMAIN'],
+    user_name:            ENV['MAILER_USER_NAME'],
+    password:             ENV['MAILER_PASSWORD'],
     authentication:       'login',
     enable_starttls_auto: true
   }
