@@ -1,0 +1,14 @@
+<h2>Courcie</h2>
+<h4><%= @user.name %>さんの旅行日程にマッチした投稿。</h4>
+
+<hr class="sectionborder">
+<% @array.each do |itinerary, request_count, latest_request| %>
+  <p><%= itinerary.departure_date %></p>
+  <p>From: <%= ISO3166::Country.new(itinerary.country_from).name %> To: <%= itinerary.city_to %></p>
+  <p>マッチングした件数 <%= request_count %>件</p>
+  <h4>最新の投稿</h4>
+  <p>購入品リスト: <%= latest_request.item_description%></p>
+  <p>報酬: <%= latest_request.reward_description%></p>
+  <p><%= link_to "この他の投稿も見る", demandposts_url(q: {country_from_eq: itinerary.country_from, city_to_cont: itinerary.city_to}, locale: I18n.locale)%></p>
+  <hr class="sectionborder">
+<% end %>

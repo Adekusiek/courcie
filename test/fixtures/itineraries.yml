@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  country_from: MyString
+  city_to: MyString
+  departure_date: 2017-06-21
+
+two:
+  country_from: MyString
+  city_to: MyString
+  departure_date: 2017-06-21

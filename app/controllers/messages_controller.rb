@@ -23,6 +23,11 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
+
+        unless @message.user_to.email.blank?
+          MessageNotificationMailer.message_notify(@message).deliver
+        end
+
         if(params[:initial_message]  == true)
           format.html { redirect_to inbox_index_path, notice: 'Message was successfully created.' }
         else

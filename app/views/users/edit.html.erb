@@ -30,6 +30,20 @@
             <%= current_user.name %>
           </div>
         </div>
+
+        <div class="form-group">
+          <%= f.label t('.notification'), class: "control-label col-lg-3" %>
+          <div class="col-lg-9">
+            <div class="checkbox-inline">
+              <%= f.check_box :request_notification %><%= t('.request_notification')%>
+            </div>
+            <div class="checkbox-inline">
+              <%= f.check_box :message_notification %><%= t('.message_notification')%>
+            </div>
+          </div>
+        </div>
+
+
       </div>
     </div>
   </div>
@@ -45,8 +59,8 @@
 
   <hr class="sectionborder">
 
-  <h2 class="text-center">Register your Itinerary</h2>
-  <p class="fine text-center">You will receive a mail if a new request matching to your itinerary is posted</p>
+  <h2 class="text-center"><%= t('.titleregister') %></h2>
+  <p class="fine text-center"><%= t('.subtitleregister') %></p>
   <br>
 
   <%= form_for @itinerary, class: "form-horizontal" do |f| %>
@@ -89,6 +103,19 @@
   </script>
 
   <br>
+
+  <div class="row">
+    <div class="col-lg-4 col-lg-offset-4">
+      <div class="form-group">
+        <% @registered_itineraries.each do |itinerary| %>
+          <%= ISO3166::Country.new(itinerary.country_from).name %>
+          <%= itinerary.city_to %>
+          <%= itinerary.departure_date %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-lg-4 col-lg-offset-4">
       <div class="form-group">
@@ -98,5 +125,5 @@
   </div>
 
   <% end %>
-
+  <hr class="sectionborder">
 </div>

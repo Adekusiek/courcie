@@ -151,4 +151,12 @@ ja:
       livingtown_placeholder: 現在居住地の入力
       name: 名前
       name_placeholder: 名前を入力
+      titleregister: 旅行日程の登録
+      subtitleregister: 条件に合うポストが登録されたら、通知によってお知らせ
+      notification: 配信設定
+      request_notification: ポストの通知
+      message_notification: メッセージの通知
       submitbutton:  プロフィールの更新
+      fromcountrytab: 出国する国
+      tocitytab: 旅行先の町
+      registerbutton: 旅行日程の登録

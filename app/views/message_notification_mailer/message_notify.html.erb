@@ -1,0 +1,7 @@
+<h2>Courcie</h2>
+<h4>New Message</h4>
+
+<p><%= @message.content %></p>
+<h4><%= @user_from.name %></h4>
+<%= link_to "Reply", inbox_personal_url(@message.messagebox_id, locale: I18n.locale), class:"btn btn-primary"%>
+<hr class="sectionborder">

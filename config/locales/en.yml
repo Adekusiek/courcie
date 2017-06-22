@@ -151,7 +151,12 @@ en:
       livingtown_placeholder: Put your city you are living in
       name: Name
       name_placeholder: Your name here
+      notification: Notification
+      request_notification: Matching Request
+      message_notification: Receiving Message
       submitbutton:  submit
+      titleregister: Register your Itinerary
+      subtitleregister: You will receive a mail if a new request matching to your itinerary is posted
       fromcountrytab: Country of departure
       tocitytab: City traveling to
       registerbutton: Set your itinerary

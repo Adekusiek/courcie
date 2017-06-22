@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
   def edit
     @itinerary = Itinerary.new
+    @registered_itineraries = Itinerary.where(user_id: params[:id])
   end
 
   def update
@@ -16,6 +17,6 @@ class UsersController < ApplicationController
 
   private
   def update_params
-    params.require(:user).permit(:name, :home_town, :avatar)
+    params.require(:user).permit(:name, :home_town, :avatar, :message_notification, :request_notification)
   end
 end
