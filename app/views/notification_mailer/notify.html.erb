@@ -1,0 +1,7 @@
+<h2>Courcieからのお知らせ</h2>
+<h4><%= @user.name %>さんの条件にマッチした投稿があります。</h4>
+
+<% @array.each do |itinerary, requestNb| %>
+  <p><%= itinerary.departure_date %>出発　<%= itinerary.country_from %>から <%= itinerary.city_to %>行きの旅行</p>
+  マッチングした件数... <%= requestNb %>件
+<% end %>
