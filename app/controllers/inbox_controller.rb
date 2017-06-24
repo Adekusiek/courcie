@@ -13,7 +13,13 @@ class InboxController < ApplicationController
   end
 
   def show
-    @messages = Message.where(messagebox_id: params[:id]).order(created_at: :desc)
-    @user = Usercontact.find_by(messagebox_id: params[:id], user_id: current_user.id).contacted
+    # check if the user has the access to this messagebox
+    usercontact = Usercontact.find_by(messagebox_id: params[:id], user_id: current_user.id)
+    if usercontact.nil?
+      redirect_to root_path
+    else
+      @messages = Message.where(messagebox_id: params[:id]).order(created_at: :desc)
+      @user = Usercontact.find_by(messagebox_id: params[:id], user_id: current_user.id).contacted
+    end
   end
 end

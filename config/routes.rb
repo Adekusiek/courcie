@@ -34,6 +34,7 @@ scope "/:locale", locale: /en|ja/   do
   #   post "/users/edit",       :to => "devise/registrations#create",  :as => nil
   # end
   post 'itineraries' => 'itineraries#create', as: "itineraries"
+  delete 'itineraries/:id' => 'itineraries#destroy', as: "itinerary"
 
 
 end

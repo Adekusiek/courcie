@@ -1,7 +1,19 @@
-<h2>Courcie</h2>
-<h4>New Message</h4>
+<hr>
 
+<h5>Courcie</h5>
+
+<hr>
+
+<h4>Hi, <%= @user_to.name %></h4>
+<p>You have a new message.</p>
 <p><%= @message.content %></p>
-<h4><%= @user_from.name %></h4>
-<%= link_to "Reply", inbox_personal_url(@message.messagebox_id, locale: I18n.locale), class:"btn btn-primary"%>
-<hr class="sectionborder">
+<p><%= @user_from.name %></p>
+<%= link_to "Reply", inbox_personal_url(@message.messagebox_id, locale: I18n.locale)%>
+
+<hr>
+
+<h4>courcie</h4>
+<p>If you have any feedback, please contact us by.</p>
+<p><a href="mailto:feedback@courcie.com">feedback@courcie.com</a></p>
+
+<%= link_to "Unsubscribe", edit_user_url(@user_to, locale: I18n.locale) %> here

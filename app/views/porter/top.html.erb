@@ -154,9 +154,15 @@
 </div>
 
 <% unless user_signed_in? %>
-  <a class="btn btn-primary btn-xl sr-button center-block btn-signin-half" role="button" data-toggle="modal" data-target="#signup-modal" data-backdrop="static" data-controls-modal="signup-modal">
-    <b><%= t '.signupbutton'%></b>
-  </a>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-offset-2 col-xs-8 col-xs-2-offset col-lg-offset-4 col-lg-4 col-lg-4-offset">
+      <a class="btn btn-primary btn-xl sr-button center-block" role="button" data-toggle="modal" data-target="#signup-modal" data-backdrop="static" data-controls-modal="signup-modal">
+        <b><%= t '.signupbutton'%></b>
+      </a>
+    </div>
+  </div>
+</div>
 <% end %>
 
 <hr class="sectionborder bg-ghostwhite">
