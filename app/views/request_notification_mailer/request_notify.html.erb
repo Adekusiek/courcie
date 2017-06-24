@@ -1,16 +1,17 @@
 <hr>
 
-<h5>Courcie</h5>
+<h3>Courcie</h3>
 
 <hr>
 
-<h4>Hi, <%= @user_to.name %></h4>
+<h4>Hi, <%= @user.name %></h4>
 <p>You have matching requests to your itinerary.</p>
 
+<hr>
+
 <% @array.each do |itinerary, request_count, latest_request| %>
-  <h5> Your itinerary </h5>
-  <p><%= itinerary.departure_date %></p>
-  <p>From: <%= ISO3166::Country.new(itinerary.country_from).name %> To: <%= itinerary.city_to %></p>
+  <h4> Your itinerary </h4>
+  <p><%= itinerary.departure_date %> From: <%= ISO3166::Country.new(itinerary.country_from).name %> To: <%= itinerary.city_to %></p>
   <p>Currently <%= request_count %> matching requests are posted</p>
   <h4>Latest request</h4>
   <p>Item description: <%= latest_request.item_description%></p>
@@ -25,4 +26,4 @@
 <p>If you have any feedback, please contact us by.</p>
 <p><a href="mailto:feedback@courcie.com">feedback@courcie.com</a></p>
 
-<%= link_to "Unsubscribe", edit_user_url(@user_to, locale: I18n.locale) %> here
+<%= link_to "Unsubscribe", edit_user_url(@user, locale: I18n.locale) %> here
