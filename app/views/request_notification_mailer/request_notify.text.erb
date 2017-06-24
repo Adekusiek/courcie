@@ -1,3 +1,20 @@
-Notification#notify
 
-<%= @greeting %>, find me in app/views/notification_mailer/notify.text.erb
+Courcie
+
+Hi, <%= @user_to.name %>
+You have matching requests to your itinerary.
+
+<% @array.each do |itinerary, request_count, latest_request| %>
+Your itinerary
+  <%= itinerary.departure_date %>
+  From: <%= ISO3166::Country.new(itinerary.country_from).name %> To: <%= itinerary.city_to %>
+  Currently <%= request_count %> matching requests are posted
+  Latest request
+  Item description: <%= latest_request.item_description%>
+  Proposed reward:  <%= latest_request.reward_description%>
+
+<% end %>
+
+courcie
+If you have any feedback, please contact us by.
+feedback@courcie.com

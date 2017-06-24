@@ -10,6 +10,6 @@ class RequestNotificationMailer < ApplicationMailer
     @user = user
     @array = itineraries.zip(request_count, latest_requests)
 
-    mail(to: @user.email, subject: "Requests that match to your on coming trip")
+    mail(from: '"Courcie" <no-reply-notification@courcie.com>', reply_to: 'feedback@courcie.com', to: @user.email, subject: "Requests that match to your on coming trip")
   end
 end

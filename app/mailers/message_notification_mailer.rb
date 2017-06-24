@@ -10,6 +10,6 @@ class MessageNotificationMailer < ApplicationMailer
     @user_to   = message.user_to
     @message   = message
 
-    mail(to: @user_to.email, subject: "Courcie: You got a new message!")
+    mail(from: '"Courcie" <no-reply-notification@courcie.com>', reply_to: 'feedback@courcie.com', to: @user_to.email, subject: "You got a new message!")
   end
 end
