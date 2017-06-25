@@ -11,14 +11,16 @@ namespace :notification_mail do
         latest_requests = []
         request_count = []
 
-        user.itineraries.each do |itinerary|
-          if itinerary.departure_date > Date.today
-            requests = Demandpost.where(country_from: itinerary.country_from, city_to: itinerary.city_to).order(created_at: :desc)
-            latest_requests << requests.first
-            valid_itineraries << itinerary
+        unless user.itineraries.nil?
+          user.itineraries.each do |itinerary|
+            if itinerary.departure_date > Date.today
+              requests = Demandpost.where(country_from: itinerary.country_from, city_to: itinerary.city_to).order(created_at: :desc)
+              latest_requests << requests.first
+              valid_itineraries << itinerary
 
-            total_request += requests.count
-            request_count << requests.count
+              total_request += requests.count
+              request_count << requests.count
+            end
           end
         end
 
