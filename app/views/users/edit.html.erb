@@ -43,7 +43,6 @@
           </div>
         </div>
 
-
       </div>
     </div>
   </div>
@@ -77,13 +76,13 @@
   <% end %>
 
   <div class="row">
-    <div class="col-md-8 col-md-offset-2">
+    <div class="col-lg-8 col-lg-offset-3">
       <div class="form-inline">
         <div class="form-group">
           <%= f.country_select :country_from, {priority: %w(US CA), prompt: t('.fromcountrytab')}, class: "form-control" %>
           <%= f.text_field :city_to, id: "city_to", class: "form-control", placeholder: t('.tocitytab') %>
           <div class="input-group date" id='datetimepicker1'>
-            <%= f.text_field :departure_date,  class: "form-control", placeholder: "Departure date" %>
+            <%= f.text_field :departure_date,  class: "form-control", placeholder: t('.departure_date') %>
             <span class="input-group-addon">
               <span class="glyphicon glyphicon-calendar"></span>
             </span>
@@ -96,23 +95,39 @@
 
   <script type="text/javascript">
     $(function () {
-      $('#datetimepicker1').datetimepicker({
-        format: 'YYYY-MM-DD'
-      });
+      $('#datetimepicker1').datetimepicker({format: 'YYYY-MM-DD'});
     });
   </script>
 
   <br>
 
   <div class="row">
-    <div class="col-lg-4 col-lg-offset-4">
+    <div class="col-lg-6 col-lg-offset-3">
       <div class="form-group">
-        <% @my_itineraries.each do |itinerary| %>
-          <%= ISO3166::Country.new(itinerary.country_from).name %>
-          <%= itinerary.city_to %>
-          <%= itinerary.departure_date %>
-          <%= link_to "Delete", itinerary_path(itinerary), method: :delete, class: "btn btn-default btn-xs" %>
-        <% end %>
+
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th><%= t('.fromcountrytab')%></th>
+                <th><%= t('.tocitytab')%></th>
+                <th><%= t('.departure_date')%></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @my_itineraries.each do |itinerary| %>
+              <tr>
+                <td><%= ISO3166::Country.new(itinerary.country_from).name %></td>
+                <td><%= itinerary.city_to %></td>
+                <td><%= itinerary.departure_date %></td>
+                <td><%= link_to "Delete", itinerary_path(itinerary), method: :delete, class: "btn btn-primary btn-xs" %></td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+
       </div>
     </div>
   </div>

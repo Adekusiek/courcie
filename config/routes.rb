@@ -13,7 +13,9 @@ scope "/:locale", locale: /en|ja/   do
 
   resources :messageboxes, only: [:create, :destroy]
   resources :messages, only: [:create]
-  resources :demandposts
+  resources :demandposts do
+    get 'page/:page', :action => :index, :on => :collection
+  end
 
   resources :users, only: [:show, :edit, :update]
 

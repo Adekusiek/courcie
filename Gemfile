@@ -46,6 +46,7 @@ gem 'paperclip'
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 
 gem 'ransack'
+gem 'kaminari'
 
 # installed to use bootstrap things
 gem 'jquery-rails'
