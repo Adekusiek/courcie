@@ -134,6 +134,11 @@ en:
       toptitle: Find your porter
       subtitle: Just post your purchase list. You'll be contacted from a porter who visit your city soon. Let's get started.
       titlebutton: Make a request
+      requesttitle: Latest requests
+      countryfrom_title: Country of Departure
+      item_title: Requested Items
+      reward_title: Possible Reward
+      requestall: Find all requests      
       tipstitle: Tips for a good request
       tipshead1: Describe what you want
       tipscontent1: The announce should be descriptive to make understand your porter what exactly you wants. It may be good if you can post a webpage link to that product.

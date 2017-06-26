@@ -1,10 +1,43 @@
 <div class="body-padding">
   <div class="section-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h2><%= t 'top._signed.toptitle'%></h2>
+          <p class="fine"><%= t 'top._signed.subtitle'%></p>
+          <%= link_to  t('top._signed.titlebutton'), new_demandpost_path, class:"btn btn-primary btn-large center-block" %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <h2><%= t 'top._signed.toptitle'%></h2>
-        <p class="fine"><%= t 'top._signed.subtitle'%></p>
-        <%= link_to  t('top._signed.titlebutton'), new_demandpost_path, class:"btn btn-primary btn-large center-block" %>
+      <div class="col-md-10 col-md-offset-1">
+        <h3><%= t 'top._signed.requesttitle' %></h3>
+
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th><%= t('top._signed.countryfrom_title')%></th>
+                <th><%= t('top._signed.item_title')%></th>
+                <th><%= t('top._signed.reward_title')%></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @demandposts.each do |demandpost| %>
+              <tr data-link="<%= demandpost_path(demandpost.id) %>">
+                <td class="request-extract"><%= ISO3166::Country.new(demandpost.country_from).name %></td>
+                <td class="request-extract"><%= demandpost.item_description %></td>
+                <td class="request-extract"><%= demandpost.reward_description %></td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+          <%= link_to t('top._signed.requestall'), demandposts_path, class: "pull-right" %>
+        </div>
+        <br>
       </div>
     </div>
   </div>

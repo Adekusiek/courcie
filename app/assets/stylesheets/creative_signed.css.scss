@@ -4,6 +4,16 @@ p.fine {
   line-height: 1.5;
 }
 
+td.request-extract {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+}
+
+
 .btn-large {
   width: 50%;
 }
